@@ -24,7 +24,7 @@
     + $ git push -u origin main
 
 ### 02. Editor de código
-+ **Contenido**: recomendación de los siguientes programas:
++ Programas requeridos:
     + **VS Code** como editor de código.
     + **MySQL Workbench** como gestor de BD.
     + **Postman** para realizar peticiones http.
@@ -47,9 +47,55 @@
     + $ git push -u origin main
 
 ### 04. Instalando PHP 7.3 + MySQL 5.6 a través de Docker
-1. Commit Video 04:
+1. Crear carpeta **docker** para comenzar un nuevo proyecto.
+2. Crear archivo docker-compose.yaml:
+    ```yaml
+    version: '3'
+
+    services:
+    mysql:
+        image: mysql:5.6
+        container_name: docker-mysql
+        environment:
+        MYSQL_DATABASE: database_name
+        MYSQL_USER: my_username
+        MYSQL_PASSWORD: my_password
+        MYSQL_ROOT_PASSWORD: my_password
+        ports:
+        - "3306:3306"
+        volumes:
+        - ./mysqldata:/var/www/html  
+        restart: always
+        
+    web:
+        image: php:7.3-apache
+        container_name: docker-php
+        ports:
+        - "80:80"
+        volumes:
+        - ./www:/var/www/html
+        restart: always  
+        links:
+        - mysql
+    ```
+3. Ejecutar en una terminal en la raíz del proyecto para crear los nuevos contenedores:
+    + $ docker-compose up -d
+4. Verificar si se estan ejecutando los nuevos contenedores:
+    + $ docker ps
+5. Ejecutar MySQL Workbench y crear una nueva conexión:
+    + Connection Name: Docker-MySQL
+    + Username: my_username
+    + Password: my_password
+    + Default Schema: database_name
+6. Crear archivo **www\index.php**:
+    ```php
+    <?php
+        echo "Soluciones++";
+    ?>
+    ```
+7. Commit Video 04:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Instalando PHP 7.3 + MySQL 5.6 a través de Docker"
     + $ git push -u origin main
 
 ## Sección 03: Base de datos con MySQL
