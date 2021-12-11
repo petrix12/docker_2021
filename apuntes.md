@@ -36,9 +36,14 @@
 ## Sección 02: Creando nuestro entorno de desarrollo
 
 ### 03. ¿Qué es Docker?
++ https://www.docker.com/products/docker-desktop
++ Ver todos los comandos de Docker:
+    + $ docker help
++ Ejecutar un Dockerfile:
+    + $ docker build -t primerdockerfile .
 1. Commit Video 03:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "¿Qué es Docker?"
     + $ git push -u origin main
 
 ### 04. Instalando PHP 7.3 + MySQL 5.6 a través de Docker
