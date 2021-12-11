@@ -24,9 +24,13 @@
     + $ git push -u origin main
 
 ### 02. Editor de código
++ **Contenido**: recomendación de los siguientes programas:
+    + **VS Code** como editor de código.
+    + **MySQL Workbench** como gestor de BD.
+    + **Postman** para realizar peticiones http.
 1. Commit Video 02:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Editor de código"
     + $ git push -u origin main
 
 ## Sección 02: Creando nuestro entorno de desarrollo
