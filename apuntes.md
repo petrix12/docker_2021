@@ -101,15 +101,30 @@
 ## Sección 03: Base de datos con MySQL
 
 ### 05. Creación de tabla
-1. Commit Video 05:
+1. Ejecutar el siguiente script en nuestra base de datos en MySQL Workbench para crear la tabla **empleado**:
+    ```sql
+    create table empleado(
+        id_empleado int NOT NULL AUTO_INCREMENT primary key,
+        nombre varchar(45), 
+        apellido varchar(45),
+        telefono int,
+        direccion varchar(45),
+        fecha_nacimiento date,
+        observacion varchar(45),
+        sueldo int(11)
+    );
+    ```
+2. Commit Video 05:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Creación de tabla"
     + $ git push -u origin main
 
 ## Sección 04: Servicio Web con PHP 
 
 ### 06. Conexión con la base de datos
-1. Commit Video 06:
+1. Ingresar al contenedor de php:
+2. mmm
+3. Commit Video 06:
     + $ git add .
     + $ git commit -m ""
     + $ git push -u origin main
