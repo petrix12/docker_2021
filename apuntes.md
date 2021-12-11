@@ -17,7 +17,7 @@
 ## Sección 01: Introducción
 
 ### 01. Introducción
-+ **Contenido**: explicación de la aplicación que desarrollaremos.
++ **Contenido**: Descripción del CRUD a desarrollar en el curso.
 1. Commit Video 01:
     + $ git add .
     + $ git commit -m "Introducción"
