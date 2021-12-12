@@ -650,9 +650,15 @@
     + $ git push -u origin main
 
 ### 13. Implementando jQuery
-1. Commit Video 13:
+1. Crear archivo de script **www\script.js**:
+    ```js
+    $(document).ready(function(){
+        alert("jQuery funcionando")
+    })
+    ```
+2. Commit Video 13:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Implementando jQuery"
     + $ git push -u origin main
 
 ### 14. Consultado información con Ajax jQuery y PHP
