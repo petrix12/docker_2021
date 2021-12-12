@@ -820,9 +820,385 @@
     + $ git push -u origin main
 
 ### 16. Guardando información con Ajax jQuery y PHP
-1. Commit Video 16:
+1. Modificar **www\frontend\agregar-empleado.html**:
+    ```html
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+            crossorigin="anonymous"
+        />
+        <link
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+            rel="stylesheet"
+        />
+        <title>CRUD con PHP MySQL Bootstrap jQuery Ajax y Docker</title>
+    </head>
+    <body>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm-3 mb-5">
+                    <a class="btn btn-warning" href="index.html" >Volver</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <form id="form_agregar">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="nombre">Nombre</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="nombre"
+                                    name="nombre"
+                                />
+                                <div id="nombre_invalido" class="invalid-feedback">
+                                    Campo nombre invalido
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="apellido">Apellido</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="apellido"
+                                    name="apellido"
+                                />
+                                <div id="apellido_invalido" class="invalid-feedback">
+                                    Campo apellido invalido
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="telefono">Teléfono</label>
+                                <input
+                                    type="number"
+                                    class="form-control"
+                                    id="telefono"
+                                    name="telefono"
+                                />
+                                <div id="telefono_invalido" class="invalid-feedback">
+                                    Campo Teléfono invalido
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="direccion">Dirección</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="direccion"
+                                    name="direccion"
+                                />
+                                <div id="direccion_invalido" class="invalid-feedback">
+                                    Campo Dirección invalido
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="fecha_nacimiento">Fecha Nacimiento</label>
+                                <input
+                                    type="date"
+                                    class="form-control"
+                                    id="fecha_nacimiento"
+                                    name="fecha_nacimiento"
+                                />
+                                <div id="fecha_nacimiento_invalido" class="invalid-feedback">
+                                    Campo Fecha Nacimiento invalido
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="sueldo">Sueldo</label>
+                                <input
+                                    type="number"
+                                    class="form-control"
+                                    id="sueldo"
+                                    name="sueldo"
+                                />
+                                <div id="sueldo_invalido" class="invalid-feedback">
+                                    Campo Sueldo invalido
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="observacion">Observación</label>
+                                <textarea
+                                    class="form-control"
+                                    id="observacion"
+                                    name="observacion"
+                                >
+                                </textarea>
+                                <div id="observacion_invalido" class="invalid-feedback">
+                                    Campo Observación invalido
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"
+    >
+    </script>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"
+    >
+    </script>
+
+    <script src="/frontend/js/script.js"></script>
+    </html>
+    ```
+2. Modificar script **www\frontend\js\script.js**:
+    ```js
+    $(document).ready(function () {
+        /**/
+        $(".invalid-feedback").hide();
+
+        if ($("#tabla")) {
+            $.ajax({
+                type: "GET",
+                url: "../../backend/mostrar-empleado.php",
+
+                success: function (data) {
+                    $("#tabla").html(data);
+
+                    $(".update").on("click", function (e) {
+                        e.preventDefault();
+                        $("#myModal").modal("show");
+                        let id_empleado = $(this).attr("id_empleado");
+                        let nombre = $(this).attr("nombre");
+                        let apellido = $(this).attr("apellido");
+                        let telefono = $(this).attr("telefono");
+                        let direccion = $(this).attr("direccion");
+                        let fecha_nacimiento = $(this).attr("fecha_nacimiento");
+                        let sueldo = $(this).attr("sueldo");
+                        let observacion = $(this).attr("observacion");
+                        $("#id_empleado").val(id_empleado);
+                        $("#nombre").val(nombre);
+                        $("#apellido").val(apellido);
+                        $("#telefono").val(telefono);
+                        $("#direccion").val(direccion);
+                        $("#fecha_nacimiento").val(fecha_nacimiento);
+                        $("#sueldo").val(sueldo);
+                        $("#observacion").val(observacion);
+                            $("#Actualizar").on("click", function (e) {
+                            $(".invalid-feedback").hide();
+                            $("input").removeClass("is-invalid");
+                            const expresiones = {
+                                usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+                                nombre: /^[a-zA-ZÀ-ÿ\s]+$/, //
+                                password: /^.{4,12}$/, // 4 a 12 digitos.
+                                correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+                                telefono: /^\d{7,14}$/, // 7 a 14 numeros.
+                            };
+
+                            let nombre = $("#nombre");
+                            let apellido = $("#apellido");
+                            let telefono = $("#telefono");
+                            let direccion = $("#direccion");
+                            let fecha_nacimiento = $("#fecha_nacimiento");
+                            let isValidDate = Date.parse(fecha_nacimiento.val());
+                            let sueldo = $("#sueldo");
+                            let observacion = $("#observacion");
+                            if (
+                                nombre.val().trim() == null ||
+                                nombre.val().trim().length == 0 ||
+                                !expresiones.nombre.test(nombre.val().trim())
+                            ) {
+                                nombre.addClass("is-invalid");
+
+                                $("#nombre_invalido").show();
+                            } else if (
+                                apellido.val().trim() == null ||
+                                apellido.val().trim().length == 0 ||
+                                !expresiones.nombre.test(apellido.val().trim())
+                            ) {
+                                apellido.addClass("is-invalid");
+
+                                $("#apellido_invalido").show();
+                            } else if (
+                                telefono.val().trim() == null ||
+                                telefono.val().trim().length == 0 ||
+                                !expresiones.telefono.test(telefono.val())
+                            ) {
+                                telefono.addClass("is-invalid");
+
+                                $("#telefono_invalido").show();
+                            } else if (
+                                direccion.val().trim() == null ||
+                                direccion.val().trim().length == 0
+                            ) {
+                                direccion.addClass("is-invalid");
+
+                                $("#direccion_invalido").show();
+                            } else if (isNaN(isValidDate)) {
+                                fecha_nacimiento.addClass("is-invalid");
+
+                                $("#fecha_nacimiento_invalido").show();
+                            } else if (
+                                sueldo.val().trim() == null ||
+                                sueldo.val().trim().length <= 0
+                            ) {
+                                sueldo.addClass("is-invalid");
+
+                                $("#sueldo_invalido").show();
+                            } else if (
+                                observacion.val().trim() == null ||
+                                observacion.val().trim().length == 0
+                            ) {
+                                observacion.addClass("is-invalid");
+
+                                $("#observacion_invalido").show();
+                            } else {
+                                $.ajax({
+                                type: "POST",
+                                data: $("#form_actualizar").serialize(),
+                                url: "../../backend/actualizar-empleado.php",
+
+                                success: function (data) {
+                                    alert(data);
+                                    location.reload();
+                                },
+                                error: function (request, status, error) {
+                                    alert(request.responseText);
+                                },
+                                });
+                            }
+                        });
+                    });
+                    $(".delete").on("click", function (e) {
+                        e.preventDefault();
+
+                        var r = confirm("Esta seguro que desea eliminarlo!");
+                        if (r == true) {
+                            let id_empleado = $(this).attr("id_empleado");
+                            $.ajax({
+                                type: "POST",
+                                data: "id_empleado=" + id_empleado,
+                                url: "../../backend/eliminar-empleado.php",
+
+                                success: function (data) {
+                                    alert(data);
+                                    location.reload();
+                                },
+                                error: function (request, status, error) {
+                                    alert(request.responseText);
+                                },
+                            });
+                        }
+                    });
+                },
+                error: function (request, status, error) {
+                alert(request.responseText);
+                },
+            });
+        }
+
+        $("#form_agregar").on("submit", function (e) {
+            e.preventDefault();
+            $(".invalid-feedback").hide();
+            $("input").removeClass("is-invalid");
+            const expresiones = {
+                usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+                nombre: /^[a-zA-ZÀ-ÿ\s]+$/, //
+                password: /^.{4,12}$/, // 4 a 12 digitos.
+                correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+                telefono: /^\d{7,14}$/, // 7 a 14 numeros.
+            };
+
+            let nombre = $("#nombre");
+            let apellido = $("#apellido");
+            let telefono = $("#telefono");
+            let direccion = $("#direccion");
+            let fecha_nacimiento = $("#fecha_nacimiento");
+            let isValidDate = Date.parse(fecha_nacimiento.val());
+            let sueldo = $("#sueldo");
+            let observacion = $("#observacion");
+            if (
+                nombre.val().trim() == null ||
+                nombre.val().trim().length == 0 ||
+                !expresiones.nombre.test(nombre.val().trim())
+            ) {
+                nombre.addClass("is-invalid");
+
+                $("#nombre_invalido").show();
+            } else if (
+                apellido.val().trim() == null ||
+                apellido.val().trim().length == 0 ||
+                !expresiones.nombre.test(apellido.val().trim())
+            ) {
+                apellido.addClass("is-invalid");
+
+                $("#apellido_invalido").show();
+            } else if (
+                telefono.val().trim() == null ||
+                telefono.val().trim().length == 0 ||
+                !expresiones.telefono.test(telefono.val())
+            ) {
+                telefono.addClass("is-invalid");
+
+                $("#telefono_invalido").show();
+            } else if (
+                direccion.val().trim() == null ||
+                direccion.val().trim().length == 0
+            ) {
+                direccion.addClass("is-invalid");
+
+                $("#direccion_invalido").show();
+            } else if (isNaN(isValidDate)) {
+                fecha_nacimiento.addClass("is-invalid");
+
+                $("#fecha_nacimiento_invalido").show();
+            } else if (sueldo.val().trim() == null || sueldo.val().trim().length <= 0) {
+                sueldo.addClass("is-invalid");
+
+                $("#sueldo_invalido").show();
+            } else if (
+                observacion.val().trim() == null ||
+                observacion.val().trim().length == 0
+            ) {
+                observacion.addClass("is-invalid");
+
+                $("#observacion_invalido").show();
+            } else {
+                $.ajax({
+                    type: "POST",
+                    data: $("#form_agregar").serialize(),
+                    url: "../../backend/guardar-empleado.php",
+
+                    success: function (data) {
+                        alert(data);
+                    },
+                    error: function (request, status, error) {
+                        alert(request.responseText);
+                    },
+                });
+            }
+        });
+    });
+    ```
+3. Commit Video 16:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Guardando información con Ajax jQuery y PHP"
     + $ git push -u origin main
 
 ### 17. Actualizando información con Ajax jQuery y PHP
