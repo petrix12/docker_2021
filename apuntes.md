@@ -417,9 +417,40 @@
     + $ git push -u origin main
 
 ### 10. Servicio Web para eliminar
-1. Commit Video 10:
+1. Crear archivo **www\eliminar-empleado.php**:
+    ```php
+    if (isset($_POST)) {
+        require_once 'conexion.php';
+        $id_empleado = isset($_POST['id_empleado']) ? mysqli_real_escape_string($conexion, $_POST['id_empleado']) : false;
+        $errores = array();
+
+        if (!empty($id_empleado) && is_numeric($id_empleado)) {
+            $id_empleado_validado = true;
+        } else {
+            $id_empleado_validado = false;
+            $errores['id_empleado'] = "El id_empleado no es valido";
+        }
+    
+        if (count($errores) == 0) {
+            $sql = "delete from empleado where id_empleado=$id_empleado";
+            $guardar = mysqli_query($conexion, $sql);
+            echo "eliminado exitosamente";
+        } else {
+            foreach ($errores as $val) {
+                echo $val;
+                echo '<br>';
+            }
+        }
+    }
+    ```
+2. Realizar petición http:
+    + URL: http://localhost/eliminar-empleado.php
+    + Método: POST
+    + Body:
+        + id_empleado: 1
+3. Commit Video 10:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Servicio Web para eliminar"
     + $ git push -u origin main
 
 ## Sección 05: Diseño con HTML5 y Bootstrap 4
