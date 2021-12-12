@@ -6,8 +6,7 @@
         echo "la conexion a la base de datos mysql ha fallado:" .mysqli_connect_error();
     }
     else{ 
-
-        echo "conexion realizada correctamente!!";
+        echo "conexion realizada correctamente!!";echo '<br>';
     }
         
     //consulta para configurar la codifiacion de caracteres
