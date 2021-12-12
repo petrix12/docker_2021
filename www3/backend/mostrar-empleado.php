@@ -42,6 +42,3 @@ while($empleado= mysqli_fetch_assoc($query)){
    echo '</tr>';
 }
 echo '</tbody></table> </div>';
-
-
-?>

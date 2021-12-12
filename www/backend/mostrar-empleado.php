@@ -16,6 +16,7 @@ echo '
 				<th scope="col">fecha_nacimiento</th>
 				<th scope="col">observacion</th>
 				<th scope="col">sueldo</th>
+				<th scope="col">Accion</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -32,8 +33,8 @@ while($empleado= mysqli_fetch_assoc($query)){
     echo '<td>'.$empleado['fecha_nacimiento'].'</td>';
     echo '<td>'.$empleado['observacion'].'</td>';
     echo '<td>'.$empleado['sueldo'].'</td>';
-   echo '</tr>';
+    echo '<td ><a class="btn btn-warning update mx-1" id_empleado="'.$empleado['id_empleado'].'" nombre="'.$empleado['nombre'].'" apellido="'.$empleado['apellido'].'"  telefono="'.$empleado['telefono'].'" direccion="'.$empleado['direccion'].'" fecha_nacimiento="'.$empleado['fecha_nacimiento'].'" observacion="'.$empleado['observacion'].'" sueldo="'.$empleado['sueldo'].'" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i></a>';
+    echo '<a class="btn btn-danger  delete mx-1" id_empleado="'.$empleado['id_empleado'].'"  href="#" role="button"><i class="fa fa-trash" aria-hidden="true"></i></a></td>';
+   	echo '</tr>';
 }
 echo '</tbody></table> </div>';
-
-?>
