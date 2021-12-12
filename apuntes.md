@@ -122,11 +122,34 @@
 ## Sección 04: Servicio Web con PHP 
 
 ### 06. Conexión con la base de datos
-1. Ingresar al contenedor de php:
-2. mmm
-3. Commit Video 06:
+1. Ingresar a la terminal del contenedor **web**:
+    + $ docker exec -it docker-php bash
+2. Verificar si tenemos la utilidad **msqli**:
+    + /var/www/html# docker-php-ext-enable mysqli
+3. En caso de no tener instalado **msqli**, ejecutar:
+    + /var/www/html# docker-php-ext-install mysqli
+4. Modificar **www\index.php**:
+    ```php
+    <?php 
+        $conexion = mysqli_connect("mysql", "my_username","my_password", "database_name","3306");
+
+        //ver si la conexion es correcta
+        if(mysqli_connect_errno()){
+            echo "la conexion a la base de datos mysql ha fallado:" .mysqli_connect_error();
+        }
+        else{ 
+
+            echo "conexion realizada correctamente!!";
+        }
+            
+        //consulta para configurar la codifiacion de caracteres
+        mysqli_query($conexion, "SET NAMES 'utf8'")
+    ?>
+    ```
+    + **Nota**: en caso de error reiniciar los servicios web y de base de datos desde Docker.
+5. Commit Video 06:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Conexión con la base de datos"
     + $ git push -u origin main
 
 ### 07. Servicio Web para guardar
