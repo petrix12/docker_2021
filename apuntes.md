@@ -755,7 +755,7 @@
         echo '<td>'.$empleado['fecha_nacimiento'].'</td>';
         echo '<td>'.$empleado['observacion'].'</td>';
         echo '<td>'.$empleado['sueldo'].'</td>';
-    echo '</tr>';
+        echo '</tr>';
     }
     echo '</tbody></table> </div>';
 
@@ -785,9 +785,38 @@
     + $ git push -u origin main
 
 ### 15. Restructurando los archivos
-1. Commit Video 15:
+1. Reestructurar los archivos del proyecto:
+    + www\backend\actualizar-empleado.php
+    + www\backend\conexion.php
+    + www\backend\eliminar-empleado.php
+    + www\backend\guardar-empleado.php
+    + www\backend\mostrar-empleado.php
+    + www\frontend\js\script.js
+    + www\frontend\agregar-empleado.html
+    + www\frontend\index.html
+2. Modificar página principal **www\frontend\index.html**:
+    ```html
+    ≡
+    <script src="\frontend\js\script.js"></script>
+    </html>
+    ```
+3. Modificar script www\frontend\js\script.js:
+    ```js
+    $(document).ready(function(){
+        /**/
+        $.ajax({
+            type: "GET",
+            url: "../../backend/mostrar-empleado.php",
+        
+            success: function(data) {
+                $("#tabla").html(data)
+            }
+        });
+    })
+    ```
+4. Commit Video 15:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Restructurando los archivos"
     + $ git push -u origin main
 
 ### 16. Guardando información con Ajax jQuery y PHP
