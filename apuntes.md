@@ -662,9 +662,126 @@
     + $ git push -u origin main
 
 ### 14. Consultado información con Ajax jQuery y PHP
-1. Commit Video 14:
+1. Modificar script **www\script.js**:
+    ```js
+    $(document).ready(function(){
+        /**/
+        $.ajax({
+            type: "GET",
+            url: "mostrar-empleado.php",
+        
+            success: function(data) {
+                $("#tabla").html(data)
+            }
+        });
+    })
+    ```
+2. Modificar página principal **www\index.html**:
+    ```html
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+            crossorigin="anonymous"
+        />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <a class="btn btn-success" href="agregar-empleado.html" role="button">Agregar Empleado <i class="fa fa-plus" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <!-- -->
+            <div class="row" id="tabla">
+                
+            </div>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!---->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"
+    >
+    </script>
+    <script src="script.js"></script>
+    </html>
+    ```
+3. Modificar **www\mostrar-empleado.php**:
+    ```php
+    <?php
+
+    require_once 'conexion.php';
+    $query = mysqli_query($conexion, "select * from empleado");
+    //
+    echo '
+    <div class="table-responsive mt-5">
+        <table  class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">nombre </th>
+                    <th scope="col">apellido</th>
+                    <th scope="col">telefono</th>
+                    <th scope="col">direccion</th>
+                    <th scope="col">fecha_nacimiento</th>
+                    <th scope="col">observacion</th>
+                    <th scope="col">sueldo</th>
+                </tr>
+            </thead>
+            <tbody>
+    ';
+    
+    while($empleado= mysqli_fetch_assoc($query)){
+        //var_dump($empleado);
+        echo '<tr>';
+        echo '<td>'.$empleado['id_empleado'].'</td>';
+        echo '<td>'.$empleado['nombre'].'</td>';
+        echo '<td>'.$empleado['apellido'].'</td>';
+        echo '<td>'.$empleado['telefono'].'</td>';
+        echo '<td>'.$empleado['direccion'].'</td>';
+        echo '<td>'.$empleado['fecha_nacimiento'].'</td>';
+        echo '<td>'.$empleado['observacion'].'</td>';
+        echo '<td>'.$empleado['sueldo'].'</td>';
+    echo '</tr>';
+    }
+    echo '</tbody></table> </div>';
+
+    ?>
+    ```
+4. Modificar **www\conexion.php**:
+    ```php
+    <?php 
+        $conexion = mysqli_connect("mysql", "my_username","my_password", "database_name","3306");
+
+        //ver si la conexion es correcta
+        if(mysqli_connect_errno()){ 
+            echo "la conexion a la base de datos mysql ha fallado:" .mysqli_connect_error();
+        }
+        else{ 
+            //
+            //echo "conexion realizada correctamente!!";echo '<br>';
+        }
+            
+        //consulta para configurar la codifiacion de caracteres
+        mysqli_query($conexion, "SET NAMES 'utf8'")
+    ?>
+    ```
+5. Commit Video 14:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Consultado información con Ajax jQuery y PHP"
     + $ git push -u origin main
 
 ### 15. Restructurando los archivos
