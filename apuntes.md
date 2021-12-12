@@ -260,16 +260,56 @@
         + fecha_nacimiento: 12-01-1972,
         + observacion: Ninguna",
         + sueldo: 3500
-
 5. Commit Video 07:
     + $ git add .
     + $ git commit -m "Servicio Web para guardar"
     + $ git push -u origin main
 
 ### 08. Servicio Web para consultar
-1. Commit Video 08:
+1. Crear archivo **www\mostrar-empleado.php**:
+    ```php
+    <?php
+
+    require_once 'conexion.php';
+    $query = mysqli_query($conexion, "select * from empleado");
+    echo '
+        <table >
+            <thead>
+            <tr>
+                <th >nombre </th>
+                <th >apellido</th>
+                <th >telefono</th>
+                <th >direccion</th>
+                <th >fecha_nacimiento</th>
+                <th >observacion</th>
+                <th >sueldo</th>
+            </tr>
+            </thead>
+            <tbody>
+    ';
+    
+    while($empleado= mysqli_fetch_assoc($query)){
+        //var_dump($empleado);
+        echo '<tr>';
+        echo '<td>'.$empleado['nombre'].'</td>';
+        echo '<td>'.$empleado['apellido'].'</td>';
+        echo '<td>'.$empleado['telefono'].'</td>';
+        echo '<td>'.$empleado['direccion'].'</td>';
+        echo '<td>'.$empleado['fecha_nacimiento'].'</td>';
+        echo '<td>'.$empleado['observacion'].'</td>';
+        echo '<td>'.$empleado['sueldo'].'</td>';
+        echo '</tr>';
+    }
+    echo '</tbody></table>';
+
+    ?>
+    ```
+2. Realizar petición http:
+    + URL: http://localhost/mostrar-empleado.php
+    + Método: GET
+3. Commit Video 08:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Servicio Web para consultar"
     + $ git push -u origin main
 
 ### 09. Servicio Web para actualizar
