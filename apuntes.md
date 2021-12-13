@@ -1251,11 +1251,11 @@
     + $ git push -u origin main
 
 ### 18. Borrando información con Ajax jQuery y PHP
++ **Contenido**: explicación del código para eliminar registro.
 1. Commit Video 18:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Borrando información con Ajax jQuery y PHP"
     + $ git push -u origin main
-
 
 ## Sección 06: Palabras Finales
 
