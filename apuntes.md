@@ -1260,7 +1260,8 @@
 ## Sección 06: Palabras Finales
 
 ### 19. Palabras Finales
++ **Contenido**: despedida del curso.
 1. Commit Video 19:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Palabras Finales"
     + $ git push -u origin main
