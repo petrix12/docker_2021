@@ -18,32 +18,33 @@
 
 ### 001. ¡Bienvenido al curso!
 + **Contenido**: Acerca del curso.
-1. Commit Video 00:
+1. Commit Video 001:
     + $ git add .
     + $ git commit -m "001. ¡Bienvenido al curso!"
     + $ git push -u origin main
 
 ### 002. ¿Cómo funciona el curso?
 + **Contenido**: Dinámica del curso.
-1. Commit Video 00:
+1. Commit Video 002:
     + $ git add .
     + $ git commit -m "002. ¿Cómo funciona el curso?"
     + $ git push -u origin main
 
 ### 003. No valores el curso antes de tiempo
-1. Commit Video 00:
++ **Contenido**: Sobre la valoración del curso.
+1. Commit Video 003:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "003. No valores el curso antes de tiempo"
     + $ git push -u origin main
 
 ### 004. Repositorio de GitHub del curso
-1. Commit Video 00:
+1. Commit Video 004:
     + $ git add .
     + $ git commit -m ""
     + $ git push -u origin main
 
 ### 005. Conoce al instructor del curso
-1. Commit Video 00:
+1. Commit Video 005:
     + $ git add .
     + $ git commit -m ""
     + $ git push -u origin main
