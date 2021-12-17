@@ -127,9 +127,10 @@
     + $ git push -u origin main
 
 #### 014. Microservicios y monolitos
++ **Contenido**: sobre monolitos y microservicios.
 1. Commit Video 014:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Microservicios y monolitos"
     + $ git push -u origin main
 
 #### 015. Docker: CI/CD y DevOps
