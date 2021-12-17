@@ -130,13 +130,14 @@
 + **Contenido**: sobre monolitos y microservicios.
 1. Commit Video 014:
     + $ git add .
-    + $ git commit -m "Microservicios y monolitos"
+    + $ git commit -m "014. Microservicios y monolitos"
     + $ git push -u origin main
 
 #### 015. Docker: CI/CD y DevOps
++ Contenido: sobre CI/CD y DevOps.
 1. Commit Video 015:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "015. Docker: CI/CD y DevOps"
     + $ git push -u origin main
 
 #### 016. Ventajas de los contenedores Docker
