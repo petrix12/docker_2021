@@ -150,20 +150,33 @@
 ### Sección 05: Instalación de Docker
 
 #### 017. Instalación de Docker en Mac OS y Windows
-1. Commit Video 01:
++ Documetación instalación de Docker en Mac Os: https://docs.docker.com/desktop/mac/install
++ Documetación instalación de Docker en Windows: https://docs.docker.com/desktop/windows/install
+1. Commit Video 017:
+    + $ git add .
+    + $ git commit -m "017. Instalación de Docker en Mac OS y Windows"
+    + $ git push -u origin main
+
+#### 018. Instalar Docker en Ubuntu
+1. Commit Video 018:
     + $ git add .
     + $ git commit -m ""
     + $ git push -u origin main
 
-#### 018. Instalar Docker en Ubuntu
-2 min
 #### 019. Instalar Visual Studio Code (VSC)
-5 min
+1. Commit Video 019:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
 
-### Sección 06: 
+### Sección 06: Primeros pasos con Docker
 
 #### 020. Corriendo tu primera Imagen de Docker
-15 min
+1. Commit Video 02:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 021. Tags de las imágenes
 5 min
 #### 022. Eliminar contenedores de Docker
