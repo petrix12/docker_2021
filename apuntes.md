@@ -134,16 +134,17 @@
     + $ git push -u origin main
 
 #### 015. Docker: CI/CD y DevOps
-+ Contenido: sobre CI/CD y DevOps.
++ **Contenido**: sobre CI/CD y DevOps.
 1. Commit Video 015:
     + $ git add .
     + $ git commit -m "015. Docker: CI/CD y DevOps"
     + $ git push -u origin main
 
 #### 016. Ventajas de los contenedores Docker
++ **Contenido**: sobre las ventajas de los contenedores Docker.
 1. Commit Video 016:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "016. Ventajas de los contenedores Docker"
     + $ git push -u origin main
 
 ### Sección 05: Instalación de Docker
