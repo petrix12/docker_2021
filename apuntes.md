@@ -120,9 +120,10 @@
     + $ git push -u origin main
 
 #### 013. Docker: La Historia
++ **Contenido**: historia de Docker.
 1. Commit Video 013:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "013. Docker: La Historia"
     + $ git push -u origin main
 
 #### 014. Microservicios y monolitos
