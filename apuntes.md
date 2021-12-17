@@ -113,9 +113,10 @@
     + $ git push -u origin main
 
 #### 012. La metáfora del transporte
++ **Contenido**: explicación de Docker a través de la metáfora del transporte.
 1. Commit Video 012:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "012. La metáfora del transporte"
     + $ git push -u origin main
 
 #### 013. Docker: La Historia
