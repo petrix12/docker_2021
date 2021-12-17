@@ -158,9 +158,12 @@
     + $ git push -u origin main
 
 #### 018. Instalar Docker en Ubuntu
-1. Commit Video 018:
+1. Documentación para instalar Docker en Ubuntu:
+    + Oficial: https://docs.docker.com/engine/install/ubuntu
+    + Heroku: https://www.hostinger.es/tutoriales/como-instalar-y-usar-docker-en-ubuntu
+2. Commit Video 018:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "018. Instalar Docker en Ubuntu"
     + $ git push -u origin main
 
 #### 019. Instalar Visual Studio Code (VSC)
