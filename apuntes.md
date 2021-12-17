@@ -106,9 +106,10 @@
     + $ git push -u origin main
 
 #### 011. Docker y contenedores
++ **Contenido**: sobre Docker y los contenedores.
 1. Commit Video 011:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "011. Docker y contenedores"
     + $ git push -u origin main
 
 #### 012. La metáfora del transporte
