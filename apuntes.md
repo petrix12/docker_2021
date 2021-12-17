@@ -82,35 +82,71 @@
     + $ git commit -m "007. BLOQUE 1: Background y fundamentos de Docker"
     + $ git push -u origin main
 
-### Sección 04: 
+### Sección 04: El qué y el porqué de los contenedores
 
 #### 008. ¿Qué es Docker?
-1. Commit Video 00:
++ **Contenido**: Sobre Docker.
+1. Commit Video 008:
+    + $ git add .
+    + $ git commit -m "008. ¿Qué es Docker?"
+    + $ git push -u origin main
+
+#### 009. Arquitectura de Docker
+1. Commit Video 009:
     + $ git add .
     + $ git commit -m ""
     + $ git push -u origin main
 
-#### 009. Arquitectura de Docker
-16 min
 #### 010. Docker vs Máquinas Virtuales (VMs)
-10 min
-#### 011. Docker y contenedores
-9 min
-#### 012. La metáfora del transporte
-6 min
-#### 013. Docker: La Historia
-8 min
-#### 014. Microservicios y monolitos
-7 min
-#### 015. Docker: CI/CD y DevOps
-5 min
-#### 016. Ventajas de los contenedores Docker
-14 min
+1. Commit Video 010:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
 
-### Sección 05: 
+#### 011. Docker y contenedores
+1. Commit Video 011:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+#### 012. La metáfora del transporte
+1. Commit Video 012:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+#### 013. Docker: La Historia
+1. Commit Video 013:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+#### 014. Microservicios y monolitos
+1. Commit Video 014:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+#### 015. Docker: CI/CD y DevOps
+1. Commit Video 015:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+#### 016. Ventajas de los contenedores Docker
+1. Commit Video 016:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+### Sección 05: Instalación de Docker
 
 #### 017. Instalación de Docker en Mac OS y Windows
-4 min
+1. Commit Video 01:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 018. Instalar Docker en Ubuntu
 2 min
 #### 019. Instalar Visual Studio Code (VSC)
