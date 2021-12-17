@@ -95,13 +95,14 @@
 + **Docker Hub**: https://hub.docker.com
 1. Commit Video 009:
     + $ git add .
-    + $ git commit -m "Arquitectura de Docker"
+    + $ git commit -m "009. Arquitectura de Docker"
     + $ git push -u origin main
 
 #### 010. Docker vs Máquinas Virtuales (VMs)
++ **Contenido**: diferencias y similitudes de un contenedor y una máquina virtual.
 1. Commit Video 010:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "010. Docker vs Máquinas Virtuales (VMs)"
     + $ git push -u origin main
 
 #### 011. Docker y contenedores
