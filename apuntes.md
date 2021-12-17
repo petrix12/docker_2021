@@ -160,16 +160,21 @@
 #### 018. Instalar Docker en Ubuntu
 1. Documentación para instalar Docker en Ubuntu:
     + Oficial: https://docs.docker.com/engine/install/ubuntu
-    + Heroku: https://www.hostinger.es/tutoriales/como-instalar-y-usar-docker-en-ubuntu
+    + Hostinger: https://www.hostinger.es/tutoriales/como-instalar-y-usar-docker-en-ubuntu
 2. Commit Video 018:
     + $ git add .
     + $ git commit -m "018. Instalar Docker en Ubuntu"
     + $ git push -u origin main
 
 #### 019. Instalar Visual Studio Code (VSC)
-1. Commit Video 019:
++ Página VSC: https://code.visualstudio.com
+1. Extensiones recomendadas:
+    + Docker
+        + Microsoft
+        + Makes it easy to create, manage, and debug containerized applications.
+2. Commit Video 019:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "019. Instalar Visual Studio Code (VSC)"
     + $ git push -u origin main
 
 ### Sección 06: Primeros pasos con Docker
