@@ -46,9 +46,10 @@
     + $ git push -u origin main
 
 ### 005. Conoce al instructor del curso
++ **Contenido**: Sobre el instructor del curso.
 1. Commit Video 005:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "005. Conoce al instructor del curso"
     + $ git push -u origin main
 
 ## Sección 02: 
