@@ -1,6 +1,7 @@
 # Curso completo de Docker de cero a experto
 + [URL del curso en Udemy](https://www.udemy.com/course/curso-completo-de-docker-de-cero-a-experto)
 + [URL del repositorio en GitHub](https://github.com/petrix12/docker_2021.git)
++ [Repositorio Joan Amengual](https://github.com/joaneeet7/Docker)
 
 ## Antes de iniciar:
 1. Crear proyecto en la página de [GitHub](https://github.com) con el nombre: **docker_2021**.
@@ -38,9 +39,10 @@
     + $ git push -u origin main
 
 ### 004. Repositorio de GitHub del curso
++ **Repositorio**: https://github.com/joaneeet7/Docker
 1. Commit Video 004:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "004. Repositorio de GitHub del curso"
     + $ git push -u origin main
 
 ### 005. Conoce al instructor del curso
