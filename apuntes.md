@@ -24,9 +24,10 @@
     + $ git push -u origin main
 
 ### 002. ¿Cómo funciona el curso?
++ **Contenido**: Dinámica del curso.
 1. Commit Video 00:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "002. ¿Cómo funciona el curso?"
     + $ git push -u origin main
 
 ### 003. No valores el curso antes de tiempo
