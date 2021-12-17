@@ -55,7 +55,11 @@
 ## Sección 02: 
 
 ### 006. LIBRO: Fundamentos esenciales de Docker
-1 min
++ Libro de Docker: https://drive.google.com/file/d/1j-3O8S1tc2a1nphQBlq8voxi8e68WAwX/view
+1. Commit Video 006:
+    + $ git add .
+    + $ git commit -m "006. LIBRO: Fundamentos esenciales de Docker"
+    + $ git push -u origin main
 
 ## Sección 03: 
 
