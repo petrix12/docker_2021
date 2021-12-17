@@ -92,9 +92,10 @@
     + $ git push -u origin main
 
 #### 009. Arquitectura de Docker
++ **Docker Hub**: https://hub.docker.com
 1. Commit Video 009:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Arquitectura de Docker"
     + $ git push -u origin main
 
 #### 010. Docker vs Máquinas Virtuales (VMs)
