@@ -190,9 +190,13 @@
     + $ git push -u origin main
 
 #### 021. Tags de las imágenes
-1. Commit Video 021:
+1. Crear una imagen Postgres con el tag **bullseye**:
+    + $ docker run -d -e POSTGRES_PASSWORD=password postgres:bullseye
+2. Correr una imagen de Postgres en un contenedor personalizado:
+    + $ docker run -d -e POSTGRES_PASSWORD=password --name bullseye_container postgres:bullseye
+3. Commit Video 021:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "021. Tags de las imágenes"
     + $ git push -u origin main
 
 #### 022. Eliminar contenedores de Docker
