@@ -293,9 +293,16 @@
     + $ git push -u origin main
 
 #### 027. Visualizar los logs generados por el contenedor
-1. Commit Video 027:
++ https://docs.docker.com/engine/reference/commandline/logs
+1. Realizar un docker logs al contenedor de postgres:
+    + $ docker logs -f a59cf41b58bf
+2. Realizar un docker logs con más detalle al contenedor de postgres:
+    + $ docker logs -f --details a59cf41b58bf
+    + $ docker logs -f --details -t a59cf41b58bf
+    + $ docker logs -f --details --until=1s a59cf41b58bf
+3. Commit Video 027:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "027. Visualizar los logs generados por el contenedor"
     + $ git push -u origin main
 
 #### 028. Eliminar múltiples contenedores
