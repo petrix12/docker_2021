@@ -221,15 +221,20 @@
         + $ docker rm bbdb76bace39 bbdb76bace40 nombre_contenedor
 3. Eliminar contenedores activos:
     + $ docker rm -f docker-php docker-mysql
-4. Commit Video 022:
+6. Commit Video 022:
     + $ git add .
     + $ git commit -m "022. Eliminar contenedores de Docker"
     + $ git push -u origin main
 
 #### 023. Eliminar imágenes de Docker
-1. Commit Video 023:
+1. Eliminar imagen:
+    + $ docker rmi a70be6beb9df
+2. Eliminar imagen de manera forzada:
+    + $ docker rmi -f a70be6beb9df
+    + **Nota**: si la imagen no se elimina, entonces habrá que eliminar primero el contenedor.
+3. Commit Video 023:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "023. Eliminar imágenes de Docker"
     + $ git push -u origin main
 
 #### 024. Imagen de Ubuntu
