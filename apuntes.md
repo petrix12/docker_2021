@@ -180,46 +180,113 @@
 ### Sección 06: Primeros pasos con Docker
 
 #### 020. Corriendo tu primera Imagen de Docker
-1. Commit Video 02:
+1. Ejecutar (al ejecutar **run**, primero se ejecuta un **pull**):
+    + $ docker run -d -e POSTGRES_PASSWORD=password postgres
+    + $ docker images
+    + $ docker ps
+2. Commit Video 020:
+    + $ git add .
+    + $ git commit -m "020. Corriendo tu primera Imagen de Docker"
+    + $ git push -u origin main
+
+#### 021. Tags de las imágenes
+1. Commit Video 021:
     + $ git add .
     + $ git commit -m ""
     + $ git push -u origin main
 
-#### 021. Tags de las imágenes
-5 min
 #### 022. Eliminar contenedores de Docker
-7 min
-#### 023. Eliminar imágenes de Docker
-5 min
-#### 024. Imagen de Ubuntu
-6 min
-#### 025. Reinicio de un contenedor de Docker
-6 min
-#### 026. Ejecución de comandos dentro de un contenedor en ejecución
-5 min
-#### 027. Visualizar los logs generados por el contenedor
-9 min
-#### 028. Eliminar múltiples contenedores
-7 min
-#### 029. Eliminar todas las imágenes creadas
-2 min
-#### 030. Búsqueda de imágenes desde la terminal
-8 min
-#### 031. Renombrar un contenedor
-3 min
-#### 032. Mostrar información de todo el sistema
-2 min
-#### 033. Guardar una imagen en un archivo comprimido
-5 min
-#### 034. Importar imágenes procedentes de un archivo comprimido
-2 min
-#### 035. Visualizar estadísticas de los contenedores
-5 min
+1. Commit Video 022:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
 
-### Sección 07: 
+#### 023. Eliminar imágenes de Docker
+1. Commit Video 023:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+#### 024. Imagen de Ubuntu
+1. Commit Video 024:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+#### 025. Reinicio de un contenedor de Docker
+1. Commit Video 025:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+#### 026. Ejecución de comandos dentro de un contenedor en ejecución
+1. Commit Video 026:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+#### 027. Visualizar los logs generados por el contenedor
+1. Commit Video 027:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+#### 028. Eliminar múltiples contenedores
+1. Commit Video 028:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+#### 029. Eliminar todas las imágenes creadas
+1. Commit Video 029:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+#### 030. Búsqueda de imágenes desde la terminal
+1. Commit Video 030:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+#### 031. Renombrar un contenedor
+1. Commit Video 031:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+#### 032. Mostrar información de todo el sistema
+1. Commit Video 032:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+#### 033. Guardar una imagen en un archivo comprimido
+1. Commit Video 033:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+#### 034. Importar imágenes procedentes de un archivo comprimido
+1. Commit Video 034:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+#### 035. Visualizar estadísticas de los contenedores
+1. Commit Video 035:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+### Sección 07: Creación de imágenes con Dockerfile
 
 #### 036. ¿Qué es un Dockerfile?
-11 min
+1. Commit Video 03:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 037. ¡Nuestra App usando Docker!
 6 min
 #### 038. Funcionamiento de distintos contenedores en nuestra App
