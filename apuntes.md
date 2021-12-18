@@ -348,9 +348,12 @@
     + $ git push -u origin main
 
 #### 031. Renombrar un contenedor
-1. Commit Video 031:
++ https://docs.docker.com/engine/reference/commandline/rename
+1. Renombrar una imagen:
+    + $ docker rename my_container my_new_container
+2. Commit Video 031:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "031. Renombrar un contenedor"
     + $ git push -u origin main
 
 #### 032. Mostrar información de todo el sistema
