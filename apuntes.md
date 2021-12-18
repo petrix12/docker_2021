@@ -322,9 +322,12 @@
 
 #### 029. Eliminar todas las imágenes creadas
 + https://docs.docker.com/engine/reference/commandline/rmi
-1. Commit Video 029:
+1. Eliminar todas las imagenes:
+    + $ docker stop $(docker ps -q)
+    + $ docker rmi $(docker images)
+2. Commit Video 029:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "029. Eliminar todas las imágenes creadas"
     + $ git push -u origin main
 
 #### 030. Búsqueda de imágenes desde la terminal
