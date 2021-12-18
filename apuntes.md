@@ -255,13 +255,31 @@
     + $ docker rm 92d0c33e00df 98be0aa0c4a8
 6. Commit Video 024:
     + $ git add .
-    + $ git commit -m "Imagen de Ubuntu"
+    + $ git commit -m "024. Imagen de Ubuntu"
     + $ git push -u origin main
 
 #### 025. Reinicio de un contenedor de Docker
-1. Commit Video 025:
++ https://docs.docker.com/engine/reference/commandline/restart
+1. Traer la imagen de postgres:bullseye:
+    + $ docker pull postgres
+2. Correr el contenedor de postgres:
+    + $ docker run -d -e POSTGRES_PASSWORD=password postgres
+3. Pausar el contenedor de postgres:
+    + $ docker stop a59cf41b58bf
+4. Reiniciar el contenedor de postgres:
+    + $ docker start a59cf41b58bf
+    + **Nota**: para eliminar un contenedor se acostumbra pararlo y luego eliminarlo:
+        + $ docker start a59cf41b58bf
+        + $ docker rm a59cf41b58bf
+5. Descargar la última imagen oficial de redis:
+    + $ docker pull redis
+6. Levantar redis:
+    + $ docker run -d redis
+7. Reiniciar redis:
+    + $ docker restart 0b867e635445
+8.  Commit Video 025:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "025. Reinicio de un contenedor de Docker"
     + $ git push -u origin main
 
 #### 026. Ejecución de comandos dentro de un contenedor en ejecución
