@@ -200,9 +200,30 @@
     + $ git push -u origin main
 
 #### 022. Eliminar contenedores de Docker
-1. Commit Video 022:
+1. Visualizar todos los contenedores (activos e inactivos):
+    + $ docker ps -a
+    + Salida:
+        ```
+        CONTAINER ID   IMAGE               COMMAND                  CREATED          STATUS                   PORTS                    NAMES
+        b090d17b3a1a   postgres:bullseye   "docker-entrypoint.s…"   10 minutes ago   Up 10 minutes            5432/tcp                 bullseye_container
+        a70be6beb9df   postgres:bullseye   "docker-entrypoint.s…"   13 minutes ago   Up 13 minutes            5432/tcp                 boring_perlman
+        7aea0c7ae6fb   postgres            "docker-entrypoint.s…"   2 hours ago      Up 2 hours               5432/tcp                 admiring_germain
+        592589e7665b   postgres            "docker-entrypoint.s…"   2 hours ago      Up 2 hours               5432/tcp                 relaxed_hopper
+        bbdb76bace39   postgres            "docker-entrypoint.s…"   2 hours ago      Exited (1) 2 hours ago                            bold_montalcini
+        214fd8544fc5   php:7.3-apache      "docker-php-entrypoi…"   6 days ago       Up 2 hours               0.0.0.0:80->80/tcp       docker-php
+        a2dafaacc769   mysql:5.6           "docker-entrypoint.s…"   6 days ago       Up 2 hours               0.0.0.0:3306->3306/tcp   docker-mysql
+        ```
+2. Eliminar el contenedor cuyo **CONTAINER ID** es **bbdb76bace39**:
+    + $ docker rm bbdb76bace39
+    + **Nota 1**: para eliminar varios contenedores a la vez:
+        + $ docker rm bbdb76bace39 bbdb76bace40 bbdb76bace50
+    + **Nota 2**: también se puede eliminar un contenedor mediante su nombre:
+        + $ docker rm bbdb76bace39 bbdb76bace40 nombre_contenedor
+3. Eliminar contenedores activos:
+    + $ docker rm -f docker-php docker-mysql
+4. Commit Video 022:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "022. Eliminar contenedores de Docker"
     + $ git push -u origin main
 
 #### 023. Eliminar imágenes de Docker
