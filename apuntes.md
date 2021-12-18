@@ -306,12 +306,22 @@
     + $ git push -u origin main
 
 #### 028. Eliminar múltiples contenedores
-1. Commit Video 028:
++ https://docs.docker.com/engine/reference/commandline/rm
+1. Ver solo los id de los contenedores:
+    + $ docker ps -q
+2. Ver el tamaño de los contenedores:
+    + $ docker ps -s
+3. Eliminar todos los contenedores que esten parados:
+    + $ docker rm $(docker ps --filter status=exited -q)
+4. Parar todos los contenedores:
+    + $ docker stop $(docker ps -q)
+5. Commit Video 028:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "028. Eliminar múltiples contenedores"
     + $ git push -u origin main
 
 #### 029. Eliminar todas las imágenes creadas
++ https://docs.docker.com/engine/reference/commandline/rmi
 1. Commit Video 029:
     + $ git add .
     + $ git commit -m ""
