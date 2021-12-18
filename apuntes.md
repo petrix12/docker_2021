@@ -357,9 +357,12 @@
     + $ git push -u origin main
 
 #### 032. Mostrar información de todo el sistema
-1. Commit Video 032:
++ https://docs.docker.com/engine/reference/commandline/info
+1. Obtener toda la información del sistema:
+    + $ docker info
+2. Commit Video 032:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "032. Mostrar información de todo el sistema"
     + $ git push -u origin main
 
 #### 033. Guardar una imagen en un archivo comprimido
