@@ -238,9 +238,24 @@
     + $ git push -u origin main
 
 #### 024. Imagen de Ubuntu
-1. Commit Video 024:
+1. Descargar la imagen de la últia versión de Ubuntu:
+    + $ docker pull ubuntu
+2. Ejecutar y observar:
+    + $ docker images
+    + $ docker ps
+    + $ docker run -d ubuntu:rolling
+    + $ docker images
+    + $ docker ps -a
+    + $ docker rmi -f 2dc51e04d744
+3. Crear un contenedor a partir de la imagen de ubuntu:
+    + $ docker run --name mi_ubuntu ubuntu
+4. Ejecutar y observar:
+    + $ docker ps -a
+5. Eliminar las imagenes:
+    + $ docker rm 92d0c33e00df 98be0aa0c4a8
+6. Commit Video 024:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Imagen de Ubuntu"
     + $ git push -u origin main
 
 #### 025. Reinicio de un contenedor de Docker
