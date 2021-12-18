@@ -283,9 +283,13 @@
     + $ git push -u origin main
 
 #### 026. Ejecución de comandos dentro de un contenedor en ejecución
-1. Commit Video 026:
+1. Levantar el servidor de postgres:
+    + $ docker run -d -e POSTGRES_PASSWORD=password postgres
+2. Ingresar a la terminal de postgres (el contenedor debe estar en ejecución):
+    + $ docker exec -it a59cf41b58bf sh
+3. Commit Video 026:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "026. Ejecución de comandos dentro de un contenedor en ejecución"
     + $ git push -u origin main
 
 #### 027. Visualizar los logs generados por el contenedor
