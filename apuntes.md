@@ -331,9 +331,20 @@
     + $ git push -u origin main
 
 #### 030. Búsqueda de imágenes desde la terminal
-1. Commit Video 030:
++ https://docs.docker.com/engine/reference/commandline/search
+1. Buscar las imagenes de ubuntu desde la terminal:
+    + $ docker search ubuntu
+2. Buscar las 3 primeras imagenes de ubuntu desde la terminal:
+    + $ docker search --limit 3 ubuntu
+3. Buscar las imagenes de ubuntu que tengan más de 3 estrellas desde la terminal:
+    + $ docker search --filter stars=40 ubuntu
+4. Buscar las primeras 4 imagenes de ubuntu que tengan más de 3 estrellas desde la terminal:
+    + $ docker search --filter stars=40 --limit 4 ubuntu
+5. Buscar las imagenes oficiales de ubuntu desde la terminal:
+    + $ docker search --filter is-official=true ubuntu
+6. Commit Video 030:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "030. Búsqueda de imágenes desde la terminal"
     + $ git push -u origin main
 
 #### 031. Renombrar un contenedor
