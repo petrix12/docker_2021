@@ -406,26 +406,62 @@
 ### Sección 07: Creación de imágenes con Dockerfile
 
 #### 036. ¿Qué es un Dockerfile?
-1. Commit Video 03:
++ **Repositorio GitHub**: https://github.com/joaneeet7/Docker
+1. Descargar **app.zip**, descomprimir y ubicarse en la raíz del proyecto.
+2. Archivo **app\Dockerfile**:
+    ```Dockerfile
+    FROM node:12.22.1-alpine3.11
+
+    WORKDIR /app
+    COPY . .
+    RUN yarn install --production
+
+    CMD ["node", "/app/src/index.js"]
+    ```
+    + Es una imagen personalizada.
+3. Commit Video 036:
+    + $ git add .
+    + $ git commit -m "036. ¿Qué es un Dockerfile?"
+    + $ git push -u origin main
+
+#### 037. ¡Nuestra App usando Docker!
+3. Commit Video 037:
     + $ git add .
     + $ git commit -m ""
     + $ git push -u origin main
 
-#### 037. ¡Nuestra App usando Docker!
-6 min
 #### 038. Funcionamiento de distintos contenedores en nuestra App
-5 min
-#### 039. Modificación de nuestra App
-6 min
-#### 040. Reconstrucción de la imagen de Docker
-3 min
-#### 041. Publicación de nuestras imágenes en Docker Hub
-7 min
+3. Commit Video 038:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
 
-### Sección 08: 
+#### 039. Modificación de nuestra App
+3. Commit Video 039:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+#### 040. Reconstrucción de la imagen de Docker
+3. Commit Video 041:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+#### 041. Publicación de nuestras imágenes en Docker Hub
+3. Commit Video 042:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+### Sección 08: Fundamentos de Docker
 
 #### 042. Tecnologías del entorno
-8 min
+3. Commit Video 04:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 043. Cómo se construyen las imágenes
 4 min
 #### 044. Capas de las imágenes
