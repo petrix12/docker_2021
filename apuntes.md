@@ -384,9 +384,12 @@
     + $ git push -u origin main
 
 #### 034. Importar imágenes procedentes de un archivo comprimido
-1. Commit Video 034:
++ https://docs.docker.com/engine/reference/commandline/load
+1. Cargar una imagen guardada de redis:
+    + $ docker load < myredis.tar.gz
+2. Commit Video 034:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "034. Importar imágenes procedentes de un archivo comprimido"
     + $ git push -u origin main
 
 #### 035. Visualizar estadísticas de los contenedores
