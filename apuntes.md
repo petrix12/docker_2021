@@ -366,9 +366,21 @@
     + $ git push -u origin main
 
 #### 033. Guardar una imagen en un archivo comprimido
-1. Commit Video 033:
++ https://docs.docker.com/engine/reference/commandline/save
+1. Ejecutar:
+    + $ docker images
+    + **Salida**:
+    ```
+    REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+    redis        latest    aea9b698d7d1   2 weeks ago    113MB
+    postgres     latest    e94a3bb61224   2 weeks ago    374MB
+    ubuntu       latest    ba6acccedd29   2 months ago   72.8MB
+    ```
+2. Guardar la imagen de redis:
+    + $ docker save redis:latest | gzip > myredis.tar.gz
+3. Commit Video 033:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "033. Guardar una imagen en un archivo comprimido"
     + $ git push -u origin main
 
 #### 034. Importar imágenes procedentes de un archivo comprimido
