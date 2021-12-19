@@ -393,9 +393,14 @@
     + $ git push -u origin main
 
 #### 035. Visualizar estadísticas de los contenedores
-1. Commit Video 035:
++ https://docs.docker.com/engine/reference/commandline/stats
+1. Runear redis:
+    + $ docker run -d redis
+2. Ver información de los contenedores que estan corriendo:
+    + $ docker stats
+3. Commit Video 035:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "035. Visualizar estadísticas de los contenedores"
     + $ git push -u origin main
 
 ### Sección 07: Creación de imágenes con Dockerfile
