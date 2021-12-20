@@ -448,16 +448,20 @@
     + $ docker run -p 3000:3000 my_app
     + **Información de la base de datos**: Using sqlite database at **/etc/todos/todo.db**
 4. Crear un volumen de la base de datos en local:
-    + $ docker run -v etc:/etc/todos -dp 3000:3000 my_app
+    + $ docker run -v C:\xampp\htdocs\cursos\32Docker\app\etc:/etc/todos -dp 3000:3000 my_app
 5. Commit Video 038:
     + $ git add .
     + $ git commit -m "038. Funcionamiento de distintos contenedores en nuestra App"
     + $ git push -u origin main
 
 #### 039. Modificación de nuestra App
+1. Crear un volumen de la aplicación de **my_app**:
+    + $ docker stop 769d9e169bf8
+    + $ docker run -v C:\xampp\htdocs\cursos\32Docker\app\etc:/etc/todos -dp 3000:3000 -v C:\xampp\htdocs\cursos\32Docker\app\src:/app/src my_app
+2. Modificar **app\src\static\js\app.js** y observar que se reflejan los cambios.
 3. Commit Video 039:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "039. Modificación de nuestra App"
     + $ git push -u origin main
 
 #### 040. Reconstrucción de la imagen de Docker
