@@ -425,9 +425,19 @@
     + $ git push -u origin main
 
 #### 037. ¡Nuestra App usando Docker!
-3. Commit Video 037:
+1. Ubicarse en la raíz del proyecto app.
+    + $ cd app
+2. Construir una imagen a partir del **Dockerfile**:
+    + $ docker build -t my_app .
+3. Para ver la imagen:
+    + $ docker images
+4. Runear un contenedor para la imagen creada:
+    + $ docker run my_app
+5. Runear el contenedor ahora exponiendo el puerto:
+    + $ docker run -dp 3000:3000 my_app
+6. Commit Video 037:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "037. ¡Nuestra App usando Docker!"
     + $ git push -u origin main
 
 #### 038. Funcionamiento de distintos contenedores en nuestra App
