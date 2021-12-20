@@ -476,9 +476,20 @@
     + $ git push -u origin main
 
 #### 041. Publicación de nuestras imágenes en Docker Hub
++ https://docs.docker.com/engine/reference/commandline/login
++ https://docs.docker.com/engine/reference/commandline/logout
+1. Crear tag de my_app v2:
+    + $ docker tag 7585d626dad1 11639889/my_app:v2
+    + **Nota**: los parámetros son:
+        + 7585d626dad1: IMAGE ID
+        + 11639889: ID de usuario de Docker Hub
+        + my_app: aplicación
+        + v2: tag de la aplicación
+2. Publicar la imagen en Dockerhub:
+    + $ docker push 11639889/my_app:v2
 3. Commit Video 042:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "041. Publicación de nuestras imágenes en Docker Hub"
     + $ git push -u origin main
 
 ### Sección 08: Fundamentos de Docker
