@@ -465,9 +465,14 @@
     + $ git push -u origin main
 
 #### 040. Reconstrucción de la imagen de Docker
+1. Parar contenedor:
+    + $ docker stop 
+2. Crear una nueva versión de **my_app**:
+    + $ docker build -t my_app:v2 .
+    + **Nota**: es importante estar ubicado en la carpeta en donde se encuentra el **Dockerfile**.
 3. Commit Video 041:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "040. Reconstrucción de la imagen de Docker"
     + $ git push -u origin main
 
 #### 041. Publicación de nuestras imágenes en Docker Hub
