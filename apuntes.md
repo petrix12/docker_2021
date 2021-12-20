@@ -441,9 +441,17 @@
     + $ git push -u origin main
 
 #### 038. Funcionamiento de distintos contenedores en nuestra App
-3. Commit Video 038:
+1. Realizar cambios en **my_app**.
+2. Parar el contenedor:
+    + $ docker stop 83848116dee7 fd03b7894bd5
+3. Runear el contenedor ahora exponiendo el puerto:
+    + $ docker run -p 3000:3000 my_app
+    + **Información de la base de datos**: Using sqlite database at **/etc/todos/todo.db**
+4. Crear un volumen de la base de datos en local:
+    + $ docker run -v etc:/etc/todos -dp 3000:3000 my_app
+5. Commit Video 038:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "038. Funcionamiento de distintos contenedores en nuestra App"
     + $ git push -u origin main
 
 #### 039. Modificación de nuestra App
