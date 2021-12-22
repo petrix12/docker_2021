@@ -527,9 +527,10 @@
     + $ git push -u origin main
 
 #### 046. Imágenes base
++ **Contenido**: sobre imágenes base.
 3. Commit Video 046:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Imágenes base"
     + $ git push -u origin main
 
 #### 047. Instrucciones de Dockerfile
