@@ -574,9 +574,10 @@
     + $ git push -u origin main
 
 #### 051. Compartir datos
++ **Contenido**: sobre compartir datos.
 3. Commit Video 051:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Compartir datos"
     + $ git push -u origin main
 
 #### 052. Contenedores de datos
