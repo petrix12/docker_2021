@@ -553,9 +553,10 @@
     + $ git push -u origin main
 
 #### 048. Conectar los contenedores con el mundo
++ **Contenido**: sobre como conectar los contenedores con el mundo.
 3. Commit Video 048:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Conectar los contenedores con el mundo"
     + $ git push -u origin main
 
 #### 049. Vinculación de contenedores
