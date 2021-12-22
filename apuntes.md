@@ -513,9 +513,10 @@
     + $ git push -u origin main
 
 #### 044. Capas de las imágenes
++ **Contenido**: sobre capas de las imágenes.
 3. Commit Video 044:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Capas de las imágenes"
     + $ git push -u origin main
 
 #### 045. Almacenamiento en caché
