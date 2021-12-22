@@ -560,9 +560,10 @@
     + $ git push -u origin main
 
 #### 049. Vinculación de contenedores
++ **Contenido**: sobre vinculación de contenedores.
 3. Commit Video 049:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Vinculación de contenedores"
     + $ git push -u origin main
 
 #### 050. Gestión de datos con volúmenes y contenedores de datos
