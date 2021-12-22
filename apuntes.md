@@ -588,9 +588,26 @@
     + $ git push -u origin main
 
 #### 053. Comandos de ejecución
-3. Commit Video 053:
+1. Comandos de ejecución:
+   + -a, --attach
+   + -d, --detach
+   + -i, --interactive
+   + --restart
+   + --rm
+   + -t, --tty
+   + -h, --hostname
+   + --name NAME
+   + -V, --volume
+   + --volumes-from
+   + --expose
+   + --link
+   + -p, --publish
+   + -P, --publish-all
+   + --entrypoint
+   + -u, --user
+2. Commit Video 053:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Comandos de ejecución"
     + $ git push -u origin main
 
 #### 054. Gestión de contenedores
