@@ -680,36 +680,63 @@
     + $ git commit -m "Utilización del registro"
     + $ git push -u origin main
 
-### Sección 09: 
+### Sección 09: Docker avanzado
 
 #### 059. Plan de ataque
-3. Commit Video 05:
++ **Contenido**: sobre lo que haremos en esta sección.
+3. Commit Video 059:
+    + $ git add .
+    + $ git commit -m "Plan de ataque"
+    + $ git push -u origin main
+
+#### 060. Multi container: Base de datos MYSQL
+3. Commit Video 060:
     + $ git add .
     + $ git commit -m ""
     + $ git push -u origin main
 
-#### 060. Multi container: Base de datos MYSQL
-13 min
 #### 061. Multi container: Base de datos MYSQL y nuestra APP
-6 min
+3. Commit Video 061:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 062. Docker-compose: Simplificación del proceso
-11 min
+3. Commit Video 062:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 063. docker-compose up vs docker-compose down
-3 min
+3. Commit Video 063:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 064. Más comandos de docker-compose
-5 min
+3. Commit Video 064:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
 
 ## BLOQUE 2 - Ciclo de vida del software con Docker
 
 ### Sección 10: BLOQUE 2: Ciclo de vida del software con Docker
 
 #### 065. BLOQUE 2: Ciclo de vida del software con Docker
-1 min
+3. Commit Video 065:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
 
-### Sección 11: 
+### Sección 11: Usando Docker en desarrollo
 
 #### 066. Plan de ataque
-4 min
+3. Commit Video 06:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 067. App de python con Flask y Redis
 7 min
 #### 068. Creación del Dockerfile
