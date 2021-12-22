@@ -628,9 +628,15 @@
     + $ git push -u origin main
 
 #### 055. Información sobre Docker
-3. Commit Video 055:
+1. Principales comandos sobre información de Docker:
+    + docker info
+    + docker images
+    + docker ps
+    + docker help
+    + docker version
+2. Commit Video 055:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Información sobre Docker"
     + $ git push -u origin main
 
 #### 056. Información sobre el contenedor
