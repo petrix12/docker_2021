@@ -520,9 +520,10 @@
     + $ git push -u origin main
 
 #### 045. Almacenamiento en caché
++ **Contenido**: sobre el almacenamiento en caché.
 3. Commit Video 045:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Almacenamiento en caché"
     + $ git push -u origin main
 
 #### 046. Imágenes base
