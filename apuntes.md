@@ -567,9 +567,10 @@
     + $ git push -u origin main
 
 #### 050. Gestión de datos con volúmenes y contenedores de datos
++ **Contenido**: sobre gestión de datos con volúmenes y contenedores de datos.
 3. Commit Video 050:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Gestión de datos con volúmenes y contenedores de datos"
     + $ git push -u origin main
 
 #### 051. Compartir datos
