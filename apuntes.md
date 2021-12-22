@@ -506,9 +506,10 @@
     + $ git push -u origin main
 
 #### 043. Cómo se construyen las imágenes
++ **Contenido**: explicación de como se construyen las imágenes.
 3. Commit Video 043:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Cómo se construyen las imágenes"
     + $ git push -u origin main
 
 #### 044. Capas de las imágenes
