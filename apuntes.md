@@ -581,9 +581,10 @@
     + $ git push -u origin main
 
 #### 052. Contenedores de datos
++ **Contenido**: sobre contenedores de datos.
 3. Commit Video 052:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Contenedores de datos"
     + $ git push -u origin main
 
 #### 053. Comandos de ejecución
