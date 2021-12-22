@@ -495,48 +495,121 @@
 ### Sección 08: Fundamentos de Docker
 
 #### 042. Tecnologías del entorno
-3. Commit Video 04:
+1. Principales tecnologías del entorno de Docker:
+    + Swarm
+    + Compose
+    + Machine
+    + Registro de confianza de Docker
+2. Commit Video 042:
+    + $ git add .
+    + $ git commit -m "042. Tecnologías del entorno"
+    + $ git push -u origin main
+
+#### 043. Cómo se construyen las imágenes
+3. Commit Video 043:
     + $ git add .
     + $ git commit -m ""
     + $ git push -u origin main
 
-#### 043. Cómo se construyen las imágenes
-4 min
 #### 044. Capas de las imágenes
-8 min
+3. Commit Video 044:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 045. Almacenamiento en caché
-3 min
+3. Commit Video 045:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 046. Imágenes base
-7 min
+3. Commit Video 046:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 047. Instrucciones de Dockerfile
-8 min
+3. Commit Video 047:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 048. Conectar los contenedores con el mundo
-3 min
+3. Commit Video 048:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 049. Vinculación de contenedores
-4 min
+3. Commit Video 049:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 050. Gestión de datos con volúmenes y contenedores de datos
-7 min
+3. Commit Video 050:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 051. Compartir datos
-2 min
+3. Commit Video 051:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 052. Contenedores de datos
-3 min
+3. Commit Video 052:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 053. Comandos de ejecución
-12 min
+3. Commit Video 053:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 054. Gestión de contenedores
-7 min
+3. Commit Video 054:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 055. Información sobre Docker
-3 min
+3. Commit Video 055:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 056. Información sobre el contenedor
-8 min
+3. Commit Video 056:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 057. Tratamiento de las imágenes
-10 min
+3. Commit Video 057:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 058. Utilización del registro
-3 min
+3. Commit Video 058:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 
 ### Sección 09: 
 
 #### 059. Plan de ataque
-4 min
+3. Commit Video 05:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 060. Multi container: Base de datos MYSQL
 13 min
 #### 061. Multi container: Base de datos MYSQL y nuestra APP
