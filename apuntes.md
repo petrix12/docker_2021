@@ -669,11 +669,16 @@
     + $ git push -u origin main
 
 #### 058. Utilización del registro
-3. Commit Video 058:
+1. Principales comandos sobre la utilización del registro:
+    + docker login
+    + docker logout
+    + docker pull
+    + docker push
+    + docker search
+2. Commit Video 058:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Utilización del registro"
     + $ git push -u origin main
-
 
 ### Sección 09: 
 
