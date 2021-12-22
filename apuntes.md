@@ -652,9 +652,20 @@
     + $ git push -u origin main
 
 #### 057. Tratamiento de las imágenes
-3. Commit Video 057:
+1. Principales comandos sobre tratamiento de las imágenes:
+    + docker build
+    + docker commit
+    + docker export
+    + docker history
+    + docker images
+    + docker import
+    + docker load
+    + docker rmi
+    + docker save
+    + docker tag
+2. Commit Video 057:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Tratamiento de las imágenes"
     + $ git push -u origin main
 
 #### 058. Utilización del registro
