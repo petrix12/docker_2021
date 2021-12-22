@@ -534,9 +534,22 @@
     + $ git push -u origin main
 
 #### 047. Instrucciones de Dockerfile
-3. Commit Video 047:
+1. Principales instrucciones de Dockerfile:
+   + ADD
+   + CMD
+   + COPY
+   + ENTRYPOINT
+   + ENV
+   + FROM
+   + MAINTAINER
+   + ONBUILD
+   + RUN
+   + USER
+   + VOLUME
+   + WORKDIR
+2. Commit Video 047:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Instrucciones de Dockerfile"
     + $ git push -u origin main
 
 #### 048. Conectar los contenedores con el mundo
