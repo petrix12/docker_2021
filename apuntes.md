@@ -793,9 +793,20 @@
     + $ git push -u origin main
 
 #### 064. Más comandos de docker-compose
+1. Ver los comandos de Docker compose:
+    + $ docker-compose
+2. Ejecutar:
+    + $ cd multi-container
+    + $ docker-compose up -d
+    + $ docker ps
+    + $ docker-compose ps
+    + $ docker-compose stop app
+    + $ docker-compose ps
+    + $ docker-compose start app
+    + $ docker-compose ps
 3. Commit Video 064:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Más comandos de docker-compose"
     + $ git push -u origin main
 
 ## BLOQUE 2 - Ciclo de vida del software con Docker
