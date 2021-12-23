@@ -690,9 +690,27 @@
     + $ git push -u origin main
 
 #### 060. Multi container: Base de datos MYSQL
-3. Commit Video 060:
+1. Crear directorio **multi-container**.
+1. Ejecutar:
+    + $ docker network create todo-app
+    + $ docker run -d \
+    + > --network todo-app --network-alias mysql \
+    + > -v C:\\xampp\\htdocs\\cursos\\32Docker\\multi-container\\todo-mysql-data:/var/lib/mysql \
+    + > -e MYSQL_ROOT_PASSWORD=secret \
+    + > -e MYSQL_DATABASE=todos \
+    + > mysql:5.7
+2. Acceder al contenedor mysql:
+    + $ docker exec -it aa97ab0f0239 mysql -p
+    + Enter password: secret
+    + mysql> show databases;
+    + mysql> Ctrl+D              (para salir de MySQL)
+3. Correr otro contenedor en la red creada **todo-app**:
+    + $ docker run -it --network todo-app nicolaka/netshoot
+4. Ejecutar:
+    + 6fdbd51b876f  ~  dig mysql
+5. Commit Video 060:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Multi container: Base de datos MYSQL"
     + $ git push -u origin main
 
 #### 061. Multi container: Base de datos MYSQL y nuestra APP
