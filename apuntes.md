@@ -732,9 +732,53 @@
     + $ git push -u origin main
 
 #### 062. Docker-compose: Simplificación del proceso
-3. Commit Video 062:
+1. Parar todos los contenedores:
+    + $ docker stop $(docker ps -q)
+2. Crear archivo **multi-container\docker-compose.yaml**:
+    ```yaml
+    version: "3.7"
+
+    services:
+
+    # docker run -dp 3000:3000 \
+    # --network todo-app \
+    # -e MYSQL_HOST=mysql \
+    # -e MYSQL_USER=root \
+    # -e MYSQL_PASSWORD=secret \
+    # -e MYSQL_DB=todos \
+    # my_app:v2
+
+    app:
+        image: my_app:v2
+        ports: 
+        - 3000:3000
+        environment:
+        MYSQL_HOST: mysql
+        MYSQL_USER: root
+        MYSQL_PASSWORD: secret
+        MYSQL_DB: todos
+    
+    # docker run -d \
+    # --network todo-app --network-alias mysql \
+    # -v C:\\xampp\\htdocs\\cursos\\32Docker\\multi-container\\todo-mysql-data:/var/lib/mysql \ 
+    # -e MYSQL_ROOT_PASSWORD=secret \
+    # -e MYSQL_DATABASE=todos \
+    # mysql:5.7
+
+    mysql:
+        image: mysql:5.7
+        volumes:
+        - C:\\xampp\\htdocs\\cursos\\32Docker\\multi-container\\todo-mysql-data:/var/lib/mysql
+        environment:
+        MYSQL_ROOT_PASSWORD: secret
+        MYSQL_DATABASE: todos
+    ```
+3. Ejecutar:
+    + $ cd multi-container
+    + $ docker-compose up -d
+4. Commit Video 062:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Docker-compose: Simplificación del proceso"
     + $ git push -u origin main
 
 #### 063. docker-compose up vs docker-compose down
