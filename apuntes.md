@@ -773,7 +773,7 @@
         MYSQL_ROOT_PASSWORD: secret
         MYSQL_DATABASE: todos
     ```
-3. Ejecutar:
+3. Levantar los contenedores en **multi-container\docker-compose.yaml** con compose:
     + $ cd multi-container
     + $ docker-compose up -d
 4. Commit Video 062:
@@ -782,9 +782,14 @@
     + $ git push -u origin main
 
 #### 063. docker-compose up vs docker-compose down
+1. Parar todos los contenedores levantados con compose:
+    + $ cd multi-container
+    + $ docker-compose down
+2. Eliminar todos los contenedores:
+    + $ docker rm $(docker ps -a -q)
 3. Commit Video 063:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "docker-compose up vs docker-compose down"
     + $ git push -u origin main
 
 #### 064. Más comandos de docker-compose
