@@ -934,9 +934,40 @@
     + $ git push -u origin main
 
 #### 069. Uso de docker-compose
-3. Commit Video 069:
+1. Crear **Bloque2\composetest\docker-compose.yaml**:
+    ```yaml
+    version: "3.9"
+
+    services:
+    # Primer servicio: WEB
+    web:
+    build: .
+    ports: 
+    - 5000:5000
+    volumes:
+    - .:/code
+    environment:
+        FLASK_ENV: development
+
+    # Segundo servicio: Redis
+    redis:
+        image: "redis:alpine"
+    ```
+2. Levantar los servicios de **Bloque2\composetest\docker-compose.yaml**:
+    + $ cd Bloque2\composetest
+    + $ docker-compose up
+3. Modificar **Bloque2\composetest\app.py**:
+    ```py
+    ≡
+    @app.route('/about')
+    def about():
+        return '<h1>Soluciones++</h1>'
+    ```
+4. Ejecutar:
+    + $ docker-compose down
+5. Commit Video 069:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "069. Uso de docker-compose"
     + $ git push -u origin main
 
 ### Sección 12: Logging
@@ -946,6 +977,10 @@
     + $ git add .
     + $ git commit -m ""
     + $ git push -u origin main
+
+    ≡
+    ```yaml
+    ```
 
 #### 071. Agregación de logs
 4 min
