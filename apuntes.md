@@ -714,9 +714,21 @@
     + $ git push -u origin main
 
 #### 061. Multi container: Base de datos MYSQL y nuestra APP
+1. Correr la imagen my_app:v2 (7585d626dad1):
+    + $ docker run -dp 3000:3000 \
+    + > --network todo-app \
+    + > -e MYSQL_HOST=mysql \
+    + > -e MYSQL_USER=root \
+    + > -e MYSQL_PASSWORD=secret \
+    + > -e MYSQL_DB=todos \
+    + > my_app:v2
+    + Nota: ahora **my_app** esta corriendo por: http://localhost:3000/
+2. Para el contenedor my_app:v2 (d394d9961ece), luego reanudar y observar:
+    + $ docker stop d394d9961ece
+    + $ docker start d394d9961ece
 3. Commit Video 061:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Multi container: Base de datos MYSQL y nuestra APP"
     + $ git push -u origin main
 
 #### 062. Docker-compose: Simplificación del proceso
