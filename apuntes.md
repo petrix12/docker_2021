@@ -824,8 +824,8 @@
 
 #### 066. Plan de ataque
 + https://docs.docker.com/compose/gettingstarted
-1. Crear carpeta **composetest** para empezar un nuevo proyecto.
-2. Crear archivo **composetest\app.py**:
+1. Crear carpeta **Bloque2\composetest** para empezar un nuevo proyecto.
+2. Crear archivo **Bloque2\composetest\app.py**:
     ```py
     import time
 
@@ -857,7 +857,7 @@
     + $ git push -u origin main
 
 #### 067. App de python con Flask y Redis
-1. Comentar composetest\app.py:
+1. Comentar **Bloque2\composetest\app.py**:
     ```py
     # Importación de módulos
     import time
@@ -890,7 +890,7 @@
         count = get_hit_count()
         return 'Hello World! I have been seen {} times.\n'.format(count)
     ```
-2. Crear archivo composetest\requirements.txt:
+2. Crear archivo **Bloque2\composetest\requirements.txt**:
     ```txt
     flask
     redis
@@ -901,9 +901,36 @@
     + $ git push -u origin main
 
 #### 068. Creación del Dockerfile
-3. Commit Video 068:
+1. Crear Bloque2\composetest\Dockerfile:
+    ```
+    FROM python:3.7-alpine
+
+    # Creación de un directorio de trabajo en Docker
+    WORKDIR /code
+
+    # Variables de entorno de Flask
+    ENV FLASK_APP=app.py 
+    ENV FLASK_RUN_HOST=0.0.0.0
+
+    # Ejecución
+    RUN apk add --no-cache gcc musl-dev linux-headers
+
+    # Instalación de dependencias
+    COPY requirements.txt requirements.txt
+    RUN pip install -r requirements.txt
+
+    # Exposición de un puerto 
+    EXPOSE 5000
+
+    # Copiar todo el código
+    COPY . .
+
+    # Ejecución del código 
+    CMD ["flask", "run"]
+    ```
+2. Commit Video 068:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "068. Creación del Dockerfile"
     + $ git push -u origin main
 
 #### 069. Uso de docker-compose
