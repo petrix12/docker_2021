@@ -507,28 +507,28 @@
 
 #### 043. Cómo se construyen las imágenes
 + **Contenido**: explicación de como se construyen las imágenes.
-3. Commit Video 043:
+1. Commit Video 043:
     + $ git add .
     + $ git commit -m "Cómo se construyen las imágenes"
     + $ git push -u origin main
 
 #### 044. Capas de las imágenes
 + **Contenido**: sobre capas de las imágenes.
-3. Commit Video 044:
+1. Commit Video 044:
     + $ git add .
     + $ git commit -m "Capas de las imágenes"
     + $ git push -u origin main
 
 #### 045. Almacenamiento en caché
 + **Contenido**: sobre el almacenamiento en caché.
-3. Commit Video 045:
+1. Commit Video 045:
     + $ git add .
     + $ git commit -m "Almacenamiento en caché"
     + $ git push -u origin main
 
 #### 046. Imágenes base
 + **Contenido**: sobre imágenes base.
-3. Commit Video 046:
+1. Commit Video 046:
     + $ git add .
     + $ git commit -m "Imágenes base"
     + $ git push -u origin main
@@ -554,35 +554,35 @@
 
 #### 048. Conectar los contenedores con el mundo
 + **Contenido**: sobre como conectar los contenedores con el mundo.
-3. Commit Video 048:
+1. Commit Video 048:
     + $ git add .
     + $ git commit -m "Conectar los contenedores con el mundo"
     + $ git push -u origin main
 
 #### 049. Vinculación de contenedores
 + **Contenido**: sobre vinculación de contenedores.
-3. Commit Video 049:
+1. Commit Video 049:
     + $ git add .
     + $ git commit -m "Vinculación de contenedores"
     + $ git push -u origin main
 
 #### 050. Gestión de datos con volúmenes y contenedores de datos
 + **Contenido**: sobre gestión de datos con volúmenes y contenedores de datos.
-3. Commit Video 050:
+1. Commit Video 050:
     + $ git add .
     + $ git commit -m "Gestión de datos con volúmenes y contenedores de datos"
     + $ git push -u origin main
 
 #### 051. Compartir datos
 + **Contenido**: sobre compartir datos.
-3. Commit Video 051:
+1. Commit Video 051:
     + $ git add .
     + $ git commit -m "Compartir datos"
     + $ git push -u origin main
 
 #### 052. Contenedores de datos
 + **Contenido**: sobre contenedores de datos.
-3. Commit Video 052:
+1. Commit Video 052:
     + $ git add .
     + $ git commit -m "Contenedores de datos"
     + $ git push -u origin main
@@ -684,7 +684,7 @@
 
 #### 059. Plan de ataque
 + **Contenido**: sobre lo que haremos en esta sección.
-3. Commit Video 059:
+1. Commit Video 059:
     + $ git add .
     + $ git commit -m "Plan de ataque"
     + $ git push -u origin main
@@ -823,22 +823,65 @@
 ### Sección 11: Usando Docker en desarrollo
 
 #### 066. Plan de ataque
-3. Commit Video 06:
++ https://docs.docker.com/compose/gettingstarted
+1. Crear carpeta **composetest** para empezar un nuevo proyecto.
+2. Crear archivo **composetest\app.py**:
+    ```py
+    import time
+
+    import redis
+    from flask import Flask
+
+    app = Flask(__name__)
+    cache = redis.Redis(host='redis', port=6379)
+
+    def get_hit_count():
+        retries = 5
+        while True:
+            try:
+                return cache.incr('hits')
+            except redis.exceptions.ConnectionError as exc:
+                if retries == 0:
+                    raise exc
+                retries -= 1
+                time.sleep(0.5)
+
+    @app.route('/')
+    def hello():
+        count = get_hit_count()
+        return 'Hello World! I have been seen {} times.\n'.format(count)
+    ```
+3. Commit Video 066:
+    + $ git add .
+    + $ git commit -m "066. Plan de ataque"
+    + $ git push -u origin main
+
+#### 067. App de python con Flask y Redis
+3. Commit Video 067:
     + $ git add .
     + $ git commit -m ""
     + $ git push -u origin main
 
-#### 067. App de python con Flask y Redis
-7 min
 #### 068. Creación del Dockerfile
-11 min
-#### 069. Uso de docker-compose
-16 min
+3. Commit Video 068:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
 
-### Sección 12: 
+#### 069. Uso de docker-compose
+3. Commit Video 069:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+### Sección 12: Logging
 
 #### 070. Logging de Docker por defecto
-9 min
+3. Commit Video 07:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
 #### 071. Agregación de logs
 4 min
 #### 072. ELK (ElasticSearch, Logstash y Kibana)
