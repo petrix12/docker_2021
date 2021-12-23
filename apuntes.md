@@ -814,9 +814,10 @@
 ### Sección 10: BLOQUE 2: Ciclo de vida del software con Docker
 
 #### 065. BLOQUE 2: Ciclo de vida del software con Docker
-3. Commit Video 065:
++ **Contenido**: En esta segunda parte del curso nos vamos a centrar de lleno en entender el Ciclo de vida del Software con Docker.
+1. Commit Video 065:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "BLOQUE 2: Ciclo de vida del software con Docker"
     + $ git push -u origin main
 
 ### Sección 11: Usando Docker en desarrollo
