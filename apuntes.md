@@ -1074,6 +1074,9 @@
 3. Ir a **http://localhost:5601/app/ml#/filedatavisualizer** y subir **Bloque2\ELK\titanic.csv**.
 4. Observar las estadísticas y luego presionar en **Import** y darle el nombre de **titanic**.
 5. Presionando en **View index in Discover** se pueden realizar busquedas y observar mejor los registros.
+1. Ejecutar:
+    + $ cd Bloque2\ELK
+    + $ docker-compose down
 6. Commit Video 074:
     + $ git add .
     + $ git commit -m "074. Ejecución de ELK"
@@ -1082,38 +1085,130 @@
 ### Sección 13: Monitorización
 
 #### 075. Monitorización con herramientas Docker
-3. Commit Video 07:
+1. Ejecutar:
+    + $ cd Bloque2\ELK
+    + $ docker-compose up -d
+    ```
+    CONTAINER ID   IMAGE                 COMMAND                  CREATED          STATUS          PORTS
+        NAMES
+    25bdf39aca63   logstash:7.9.2        "/usr/local/bin/dock…"   21 seconds ago   Up 20 seconds   5044/tcp, 0.0.0.0:5000->5000/tcp, 9600/tcp   elk_logstash_1
+    e8560ff3c955   kibana:7.9.2          "/usr/local/bin/dumb…"   21 seconds ago   Up 20 seconds   0.0.0.0:5601->5601/tcp
+        elk_kibana_1
+    7a7667724fa1   elasticsearch:7.9.2   "/tini -- /usr/local…"   21 seconds ago   Up 20 seconds   0.0.0.0:9200->9200/tcp, 9300/tcp
+        elk_elasticsearch_1
+    ```
+    + $ docker stats 25bdf39aca63
+    + $ docker stats e8560ff3c955
+2. Inspeccionar todos los contenedores:
+    + $ docker stats \
+    + > $(docker inspect -f {{.Name}} $(docker ps -q))
+3. Commit Video 075:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "075. Monitorización con herramientas Docker"
+    + $ git push -u origin main
+
+#### 076. cAdvisor
+3. Commit Video 076:
+    + $ git add .
+    + $ git commit -m "075. Monitorización con herramientas Docker"
     + $ git push -u origin main
 
     ≡
     ```yaml
     ```
 
-#### 076. cAdvisor
-8 min
 #### 077. Prometheus
-8 min
-#### 078. Grafana
-5 min
-#### 079. Construcción de Prometheus
-7 min
-#### 080. Construcción de Grafana
-3 min
-#### 081. Redis & Redis exporter
-8 min
-#### 082. Visualizar métricas en Prometheus
-10 min
-#### 083. Visualizar métricas en Grafana
-4 min
-#### 084. Dashboard completo de redis en Grafana
-4 min
+3. Commit Video 077:
+    + $ git add .
+    + $ git commit -m "075. Monitorización con herramientas Docker"
+    + $ git push -u origin main
 
-### Sección 14: 
+    ≡
+    ```yaml
+    ```
+
+#### 078. Grafana
+3. Commit Video 078:
+    + $ git add .
+    + $ git commit -m "075. Monitorización con herramientas Docker"
+    + $ git push -u origin main
+
+    ≡
+    ```yaml
+    ```
+
+#### 079. Construcción de Prometheus
+3. Commit Video 079:
+    + $ git add .
+    + $ git commit -m "075. Monitorización con herramientas Docker"
+    + $ git push -u origin main
+
+    ≡
+    ```yaml
+    ```
+
+#### 080. Construcción de Grafana
+3. Commit Video 080:
+    + $ git add .
+    + $ git commit -m "075. Monitorización con herramientas Docker"
+    + $ git push -u origin main
+
+    ≡
+    ```yaml
+    ```
+
+#### 081. Redis & Redis exporter
+3. Commit Video 081:
+    + $ git add .
+    + $ git commit -m "075. Monitorización con herramientas Docker"
+    + $ git push -u origin main
+
+    ≡
+    ```yaml
+    ```
+
+#### 082. Visualizar métricas en Prometheus
+3. Commit Video 082:
+    + $ git add .
+    + $ git commit -m "075. Monitorización con herramientas Docker"
+    + $ git push -u origin main
+
+    ≡
+    ```yaml
+    ```
+
+#### 083. Visualizar métricas en Grafana
+3. Commit Video 083:
+    + $ git add .
+    + $ git commit -m "075. Monitorización con herramientas Docker"
+    + $ git push -u origin main
+
+    ≡
+    ```yaml
+    ```
+
+#### 084. Dashboard completo de redis en Grafana
+3. Commit Video 084:
+    + $ git add .
+    + $ git commit -m "075. Monitorización con herramientas Docker"
+    + $ git push -u origin main
+
+    ≡
+    ```yaml
+    ```
+
+### Sección 14: Desplegando una DApaa de Blockchain con Tokens NFT con Docker
 
 #### 085. Plan de ataque
-7 min
+3. Commit Video 08:
+    + $ git add .
+    + $ git commit -m "075. Monitorización con herramientas Docker"
+    + $ git push -u origin main
+
+    ≡
+    ```yaml
+    ```
+
 #### 086. Creación del Dockerfile
 12 min
 #### 087. Instalación de Metamask y Ganache
