@@ -1004,14 +1004,62 @@
     + $ git push -u origin main
 
 #### 073. docker-compose para ELK
-3. Commit Video 073:
-    + $ git add .
-    + $ git commit -m ""
-    + $ git push -u origin main
+1. Crear carpeta **Bloque2\ELK** para nuevo proyecto.
+2. Descargar archivo **titanic.csv** de los recursos del curso y ubicarlo en **Bloque2\ELK\titanic.csv**.
+3. Crear archivo de configuración **Bloque2\ELK\ports.conf**:
+    ```conf
+    input{
+        tcp{
+            port => 5000
+        }
+    }
 
-    ≡
-    ```yaml
+    output{
+        elasticsearch{
+            host => ["elasticsearch:9200"]
+        }
+    }
     ```
+4. Crear el Docker Compose **Bloque2\ELK\docker-compose.yml**:
+    ```yml
+    version: '3.7'
+
+    # ELK
+    services:
+
+    # Elasticsearch
+    elasticsearch:
+        image: elasticsearch:7.9.2
+        ports:
+           - '9200:9200'
+        environment:
+           - discovery.type=single-node
+        ulimits:
+        memlock:
+            soft: -1
+            hard: -1
+
+    # Kibana
+    kibana:
+        image: kibana:7.9.2
+        ports:
+           - '5601:5601'
+
+    # Logstash
+    logstash:
+        image: logstash:7.9.2
+        ports:
+           - '5000:5000'
+        volumes:
+          - type: bind
+            source: .
+            target: /usr/share/logstash/pipeline
+            read_only: true
+    ```
+5. Commit Video 073:
+    + $ git add .
+    + $ git commit -m "073. docker-compose para ELK"
+    + $ git push -u origin main
 
 #### 074. Ejecución de ELK
 3. Commit Video 074:
