@@ -997,14 +997,11 @@
     + $ git push -u origin main
 
 #### 072. ELK (ElasticSearch, Logstash y Kibana)
++ **Contenido**: sobre ELK (ElasticSearch, Logstash y Kibana).
 3. Commit Video 072:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "ELK (ElasticSearch, Logstash y Kibana)"
     + $ git push -u origin main
-
-    ≡
-    ```yaml
-    ```
 
 #### 073. docker-compose para ELK
 3. Commit Video 073:
