@@ -973,6 +973,65 @@
 ### Sección 12: Logging
 
 #### 070. Logging de Docker por defecto
+1. Runear imagen de Debian con el nombre de **logtest**:
+    + $ docker run --name logtest debian sh -c "echo stdout"
+2. Ver los logs del contenedor:
+    + $ docker logs -t logtest
+3. Ejecutar:
+    + $ docker run -d --name streamtest debian \
+    + > sh -c 'while true; do echo "hola Solucionespp"; sleep 1; done;'
+4. Ver los logs de streamtest:
+    + $ docker logs -f streamtest
+5. Eliminar todos los contenedores:
+    + $ docker rm -f $(docker ps -a -q)
+6. Commit Video 070:
+    + $ git add .
+    + $ git commit -m "070. Logging de Docker por defecto"
+    + $ git push -u origin main
+
+#### 071. Agregación de logs
+3. Commit Video 071:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yaml
+    ```
+
+#### 072. ELK (ElasticSearch, Logstash y Kibana)
+3. Commit Video 072:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yaml
+    ```
+
+#### 073. docker-compose para ELK
+3. Commit Video 073:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yaml
+    ```
+
+#### 074. Ejecución de ELK
+3. Commit Video 074:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yaml
+    ```
+
+### Sección 13: Monitorización
+
+#### 075. Monitorización con herramientas Docker
 3. Commit Video 07:
     + $ git add .
     + $ git commit -m ""
@@ -982,19 +1041,6 @@
     ```yaml
     ```
 
-#### 071. Agregación de logs
-4 min
-#### 072. ELK (ElasticSearch, Logstash y Kibana)
-17 min
-#### 073. docker-compose para ELK
-9 min
-#### 074. Ejecución de ELK
-13 min
-
-### Sección 13: 
-
-#### 075. Monitorización con herramientas Docker
-6 min
 #### 076. cAdvisor
 8 min
 #### 077. Prometheus
