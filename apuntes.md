@@ -990,14 +990,11 @@
     + $ git push -u origin main
 
 #### 071. Agregación de logs
++ **Contenido**: sobre agragación de logs.
 3. Commit Video 071:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "071. Agregación de logs"
     + $ git push -u origin main
-
-    ≡
-    ```yaml
-    ```
 
 #### 072. ELK (ElasticSearch, Logstash y Kibana)
 3. Commit Video 072:
