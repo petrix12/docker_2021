@@ -1062,14 +1062,22 @@
     + $ git push -u origin main
 
 #### 074. Ejecución de ELK
-3. Commit Video 074:
+1. Ejecutar:
+    + $ cd Bloque2\ELK
+    + $ docker-compose up -d
+2. Ir a las siguientes direcciones y observar:
+    + http://localhost:9200
+    + http://localhost:9200/_cat
+    + http://localhost:9200/_cat/healt
+    + http://localhost:9200/_cat/indices
+    + http://localhost:5601
+3. Ir a **http://localhost:5601/app/ml#/filedatavisualizer** y subir **Bloque2\ELK\titanic.csv**.
+4. Observar las estadísticas y luego presionar en **Import** y darle el nombre de **titanic**.
+5. Presionando en **View index in Discover** se pueden realizar busquedas y observar mejor los registros.
+6. Commit Video 074:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "074. Ejecución de ELK"
     + $ git push -u origin main
-
-    ≡
-    ```yaml
-    ```
 
 ### Sección 13: Monitorización
 
