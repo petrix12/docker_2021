@@ -1286,14 +1286,14 @@
     + $ git push -u origin main
 
 #### 084. Dashboard completo de redis en Grafana
-3. Commit Video 084:
+1. Ir al dashboard de Grafana y presionar el icono **+** y seleccionar **import**:
+    + $ http://localhost:3000/dashboard/import
+    + Cargar: Bloque2\monitor\grafana\redis-dashboard-for-prometheus-redis-exporter-1-x_rev3.json
+    + En **prom** seleccionar Prmetheus y presionar **Import**.
+2. Commit Video 084:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "084. Dashboard completo de redis en Grafana"
     + $ git push -u origin main
-
-    ≡
-    ```yaml
-    ```
 
 ### Sección 14: Desplegando una DApp de Blockchain con Tokens NFT con Docker
 
