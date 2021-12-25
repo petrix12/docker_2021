@@ -1181,14 +1181,23 @@
     + $ git push -u origin main
 
 #### 080. Construcción de Grafana
+1. Descargar **redis-dashboard-for-prometheus-redis-exporter-1-x_rev3.json** de los recursos y ubicarlos en **Bloque2\monitor\grafana\redis-dashboard-for-prometheus-redis-exporter-1-x_rev3.json**.
+2. Crear **Bloque2\monitor\grafana\docker-compose.yml**:
+    ```yml
+    version: '3'
+
+    services:
+    grafana:
+        image: grafana/grafana
+        container_name: grafana
+        ports:
+           - 3000:3000
+        restart: unless-stopped
+    ```
 3. Commit Video 080:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "080. Construcción de Grafana"
     + $ git push -u origin main
-
-    ≡
-    ```yaml
-    ```
 
 #### 081. Redis & Redis exporter
 3. Commit Video 081:
