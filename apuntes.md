@@ -1108,14 +1108,17 @@
     + $ git push -u origin main
 
 #### 076. cAdvisor
++ https://hub.docker.com/r/google/cadvisor
+1. Ejecutar:
+    + $ docker run -d \
+    + > --name cadvisor \
+    + > -p 8080:8080 \
+    + > google/cadvisor:latest
+2. Ver Google cAdvisor en: http://localhost:8080/containers
 3. Commit Video 076:
     + $ git add .
     + $ git commit -m "075. Monitorización con herramientas Docker"
     + $ git push -u origin main
-
-    ≡
-    ```yaml
-    ```
 
 #### 077. Prometheus
 3. Commit Video 077:
