@@ -1117,20 +1117,21 @@
 2. Ver Google cAdvisor en: http://localhost:8080/containers
 3. Commit Video 076:
     + $ git add .
-    + $ git commit -m "075. Monitorización con herramientas Docker"
+    + $ git commit -m "076. cAdvisor"
     + $ git push -u origin main
 
 #### 077. Prometheus
 + **Contenido**: sobre Prometheus.
-3. Commit Video 077:
+1. Commit Video 077:
     + $ git add .
-    + $ git commit -m "075. Monitorización con herramientas Docker"
+    + $ git commit -m "077. Prometheus"
     + $ git push -u origin main
 
 #### 078. Grafana
-3. Commit Video 078:
++ **Contenido**: sobre Grafana.
+1. Commit Video 078:
     + $ git add .
-    + $ git commit -m "075. Monitorización con herramientas Docker"
+    + $ git commit -m "078. Grafana"
     + $ git push -u origin main
 
     ≡
@@ -1140,7 +1141,7 @@
 #### 079. Construcción de Prometheus
 3. Commit Video 079:
     + $ git add .
-    + $ git commit -m "075. Monitorización con herramientas Docker"
+    + $ git commit -m ""
     + $ git push -u origin main
 
     ≡
@@ -1150,7 +1151,7 @@
 #### 080. Construcción de Grafana
 3. Commit Video 080:
     + $ git add .
-    + $ git commit -m "075. Monitorización con herramientas Docker"
+    + $ git commit -m ""
     + $ git push -u origin main
 
     ≡
@@ -1160,7 +1161,7 @@
 #### 081. Redis & Redis exporter
 3. Commit Video 081:
     + $ git add .
-    + $ git commit -m "075. Monitorización con herramientas Docker"
+    + $ git commit -m ""
     + $ git push -u origin main
 
     ≡
@@ -1170,7 +1171,7 @@
 #### 082. Visualizar métricas en Prometheus
 3. Commit Video 082:
     + $ git add .
-    + $ git commit -m "075. Monitorización con herramientas Docker"
+    + $ git commit -m ""
     + $ git push -u origin main
 
     ≡
@@ -1180,7 +1181,7 @@
 #### 083. Visualizar métricas en Grafana
 3. Commit Video 083:
     + $ git add .
-    + $ git commit -m "075. Monitorización con herramientas Docker"
+    + $ git commit -m ""
     + $ git push -u origin main
 
     ≡
@@ -1190,7 +1191,7 @@
 #### 084. Dashboard completo de redis en Grafana
 3. Commit Video 084:
     + $ git add .
-    + $ git commit -m "075. Monitorización con herramientas Docker"
+    + $ git commit -m ""
     + $ git push -u origin main
 
     ≡
@@ -1202,7 +1203,7 @@
 #### 085. Plan de ataque
 3. Commit Video 08:
     + $ git add .
-    + $ git commit -m "075. Monitorización con herramientas Docker"
+    + $ git commit -m ""
     + $ git push -u origin main
 
     ≡
