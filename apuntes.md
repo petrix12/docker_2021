@@ -1134,19 +1134,51 @@
     + $ git commit -m "078. Grafana"
     + $ git push -u origin main
 
-    ≡
-    ```yaml
-    ```
-
 #### 079. Construcción de Prometheus
-3. Commit Video 079:
-    + $ git add .
-    + $ git commit -m ""
-    + $ git push -u origin main
+1. Crear carpeta **Bloque2\monitor** para nuevo proyecto.
+2. Crear archivo de configuración **Bloque2\monitor\prometheus\prometheus.yml**:
+    ```yml
+    global:
+        scrape_interval:     15s
+        evaluation_interval: 15s
 
-    ≡
-    ```yaml
+    rule_files:
+        # - "first.rules"
+        # - "second.rules"
+
+    scrape_configs:
+       - job_name: prometheus
+         static_configs:
+           - targets: ['localhost:9090']
+       - job_name: redis-exporter
+         static_configs:
+           - targets: ['redis-exporter:9121']
     ```
+3. crear archivo **Bloque2\monitor\prometheus\docker-compose.yml**:
+    ```yml
+    version: '3'
+
+    services:
+        prometheus:
+            image: prom/prometheus
+            container_name: prometheus
+            ports:
+               - 9090:9090
+            volumes:
+               - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+            restart: unless-stopped
+            networks: 
+               - prometheus
+
+    networks:
+        prometheus:
+            driver: bridge
+            name: prometheus
+    ```
+4. Commit Video 079:
+    + $ git add .
+    + $ git commit -m "079. Construcción de Prometheus"
+    + $ git push -u origin main
 
 #### 080. Construcción de Grafana
 3. Commit Video 080:
