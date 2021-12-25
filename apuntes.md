@@ -1250,19 +1250,23 @@
     + $ git commit -m "081. Redis & Redis exporter"
     + $ git push -u origin main
 
-    ≡
-    ```yaml
-    ```
-
 #### 082. Visualizar métricas en Prometheus
+1. Levantar todos los servicios del proyecto **monitor**:
+    + $ cd c:\xampp\htdocs\cursos\32Docker\Bloque2\monitor\prometheus
+    + $ docker-compose up -d
+    + $ cd c:\xampp\htdocs\cursos\32Docker\Bloque2\monitor\grafana
+    + $ docker-compose up -d
+    + $ cd c:\xampp\htdocs\cursos\32Docker\Bloque2\monitor\redis
+    + $ docker-compose up -d
+    + $ cd c:\xampp\htdocs\cursos\32Docker\Bloque2\monitor\redis-exporter
+    + $ docker-compose up -d
+2. Explorar métricas:
+    + http://localhost:9090
+    + http://localhost:9090/targets
 3. Commit Video 082:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "082. Visualizar métricas en Prometheus"
     + $ git push -u origin main
-
-    ≡
-    ```yaml
-    ```
 
 #### 083. Visualizar métricas en Grafana
 3. Commit Video 083:
@@ -1284,7 +1288,7 @@
     ```yaml
     ```
 
-### Sección 14: Desplegando una DApaa de Blockchain con Tokens NFT con Docker
+### Sección 14: Desplegando una DApp de Blockchain con Tokens NFT con Docker
 
 #### 085. Plan de ataque
 3. Commit Video 08:
