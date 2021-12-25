@@ -1269,14 +1269,21 @@
     + $ git push -u origin main
 
 #### 083. Visualizar métricas en Grafana
-3. Commit Video 083:
+1. Explorar:
+    + http://localhost:3000/login
+        + Email or username: admin
+        + Password: admin
+        + Remover todos los elementos.
+        + Ir a configuración.
+        + Seleccionar Promeheus:
+            + URL: http://localhost:9090
+            + Access: Browser
+            + Presionar: Save & test
+        + Regresar a Dashboard.
+2. Commit Video 083:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "083. Visualizar métricas en Grafana"
     + $ git push -u origin main
-
-    ≡
-    ```yaml
-    ```
 
 #### 084. Dashboard completo de redis en Grafana
 3. Commit Video 084:
