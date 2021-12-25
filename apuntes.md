@@ -1298,32 +1298,85 @@
 ### Sección 14: Desplegando una DApp de Blockchain con Tokens NFT con Docker
 
 #### 085. Plan de ataque
-3. Commit Video 08:
+1. Ir al repositorio del curso **https://github.com/joaneeet7/Docker** y buscar el proyecto **Colores_docker** del Bloque 2 y ubicarlo en **Bloque2\Colores**.
+3. Commit Video 085:
+    + $ git add .
+    + $ git commit -m "085. Plan de ataque"
+    + $ git push -u origin main
+
+#### 086. Creación del Dockerfile
+3. Commit Video 086:
     + $ git add .
     + $ git commit -m ""
     + $ git push -u origin main
 
     ≡
-    ```yaml
+    ```yml
     ```
 
-#### 086. Creación del Dockerfile
-12 min
 #### 087. Instalación de Metamask y Ganache
-9 min
-#### 088. Construcción de la imagen y ejecución
-9 min
-#### 089. Uso de la DApp con Tokens NFT
-7 min
-#### 090. Ventajas del uso de Docker para nuestra DAPP de Tokens NFT
-6 min
-#### 091. Monitorización de los contenedores
-5 min
+3. Commit Video 087:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
 
-### Sección 15: 
+    ≡
+    ```yml
+    ```
+
+#### 088. Construcción de la imagen y ejecución
+3. Commit Video 088:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 089. Uso de la DApp con Tokens NFT
+3. Commit Video 089:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 090. Ventajas del uso de Docker para nuestra DAPP de Tokens NFT
+3. Commit Video 090:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 091. Monitorización de los contenedores
+3. Commit Video 091:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+
+### Sección 15: Automatización de Docker - Nivel experto
 
 #### 092. Automatización de redis
-36 min
+3. Commit Video 09:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
 #### 093. Automatización de la monitorización: Grafana, Prometheus y redis
 19 min
 #### 094. Automatización de ELK
