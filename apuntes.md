@@ -1200,9 +1200,54 @@
     + $ git push -u origin main
 
 #### 081. Redis & Redis exporter
+1. Crear archivo **Bloque2\monitor\redis\docker-compose.yml**:
+    ```yml
+    version: '3'
+    services:
+    redis:
+        image: redis:latest
+        container_name: redis
+        ports:
+           - 6379:6379
+        restart: unless-stopped
+        networks:
+           - redis
+
+    networks:
+        redis:
+            driver: bridge
+            name: redis
+    ```
+2. Crear archivo **Bloque2\monitor\redis-exporter\docker-compose.yml**:
+    ```yaml
+    version: '3'
+
+    networks:
+        redis:
+            external:
+                name: redis
+        prometheus:
+            external:
+                name: prometheus
+
+    services:
+        redis-exporter:
+            image: oliver006/redis_exporter
+            container_name: redis-exporter
+            ports: 
+               - 9121:9121
+            restart: unless-stopped
+            environment:
+                REDIS_ADDR: "redis:6379"
+                REDIS_USER: null
+                REDIS_PASSWORD: null
+            networks:
+               - redis
+               - prometheus
+    ```
 3. Commit Video 081:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "081. Redis & Redis exporter"
     + $ git push -u origin main
 
     ≡
