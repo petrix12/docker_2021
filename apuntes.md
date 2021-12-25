@@ -1121,14 +1121,11 @@
     + $ git push -u origin main
 
 #### 077. Prometheus
++ **Contenido**: sobre Prometheus.
 3. Commit Video 077:
     + $ git add .
     + $ git commit -m "075. Monitorización con herramientas Docker"
     + $ git push -u origin main
-
-    ≡
-    ```yaml
-    ```
 
 #### 078. Grafana
 3. Commit Video 078:
