@@ -1485,14 +1485,99 @@
     + $ git push -u origin main
 
 #### 093. Automatización de la monitorización: Grafana, Prometheus y redis
+1. Mover **Bloque2\monitor** a **Bloque2\automatico\monitor**.
+2. Modificar archivo **Bloque2\automatico\Makefile**:
+    ```Makefile
+    ≡
+    # -----------------------------------
+    # 2. DESPLIEGUE DEL MONITOR
+    # -----------------------------------
+
+    # Construcción del monitor
+    build_monitor_prometheus:
+        @echo 'Construcción y despliegue de Prometheus'
+        cd monitor/prometheus && docker-compose up -d
+
+    build_monitor_grafana:
+        @echo 'Construcción y despliegue de Grafana'
+        cd monitor/grafana && docker-compose up -d
+
+    build_monitor_redis:
+        @echo 'Construcción y despliegue de redis'
+        cd monitor/redis && docker-compose up -d
+
+    build_monitor_redis_exporter:
+        @echo 'Construcción y despliegue de redis-exporter'
+        cd monitor/redis-exporter && docker-compose up -d
+
+    build_monitor: ## Construcción del monitor
+        @echo 'Contenedores en ejecución'
+        docker ps -a 
+        $(MAKE) build_monitor_prometheus
+        $(MAKE) build_monitor_grafana
+        $(MAKE) build_monitor_redis
+        $(MAKE) build_monitor_redis_exporter
+        @echo 'Contenedores en ejecución'
+        docker ps -a 
+
+    # Parar los servicios del monitor
+    stop_monitor_prometheus:
+        @echo 'Parar el servicio de Prometheus'
+        cd monitor/prometheus && docker-compose stop prometheus
+
+    stop_monitor_grafana:
+        @echo 'Parar el servicio de Grafana'
+        cd monitor/grafana && docker-compose stop grafana
+
+    stop_monitor_redis:
+        @echo 'Parar el servicio de redis'
+        cd monitor/redis && docker-compose stop redis
+
+    stop_monitor_redis_exporter:
+        @echo 'Parar el servicio de redis'
+        cd monitor/redis-exporter && docker-compose stop redis-exporter
+
+    stop_monitor: ## Para la ejecución de los conetendores del monitor
+        @echo 'Contenedores en ejecución'
+        docker ps -a
+        $(MAKE) stop_monitor_prometheus
+        $(MAKE) stop_monitor_grafana
+        $(MAKE) stop_monitor_redis
+        $(MAKE) stop_monitor_redis_exporter
+        @echo 'Contenedores en ejecución'
+        docker ps -a
+
+    # Eliminación de los servicios del monitor
+    down_monitor_prometheus:
+        @echo 'Parar el servicio de Prometheus'
+        cd monitor/prometheus && docker-compose down prometheus
+
+    down_monitor_grafana:
+        @echo 'Parar el servicio de grafana'
+        cd monitor/grafana && docker-compose down grafana
+
+    down_monitor_redis:
+        @echo 'Parar el servicio de redis'
+        cd monitor/redis && docker-compose down redis
+
+    down_monitor_redis_exporter:
+        @echo 'Parar el servicio de redis-exporter'
+        cd monitor/redis-exporter && docker-compose down redis-exporter
+
+    down_monitor: ## Eliminación de los contenedores del monitor
+        @echo 'Contenedores en ejecución'
+        docker ps -a
+        $(MAKE) down_monitor_prometheus
+        $(MAKE) down_monitor_grafana
+        $(MAKE) down_monitor_redis
+        $(MAKE) down_monitor_redis_exporter
+        @echo 'Contenedores en ejecución'
+        docker ps -a
+    ```
 3. Commit Video 093:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "093. Automatización de la monitorización: Grafana, Prometheus y redis"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 094. Automatización de ELK
 3. Commit Video 094:
