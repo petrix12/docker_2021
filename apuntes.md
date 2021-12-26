@@ -1679,14 +1679,42 @@
     + $ git push -u origin main
 
 #### 096. Automatización de cAdvisor
-3. Commit Video 096:
-    + $ git add .
-    + $ git commit -m ""
-    + $ git push -u origin main
-
+1. Modificar archivo **Bloque2\automatico\Makefile**:
+    ```Makefile
     ≡
-    ```yml
+    # -----------------------------------
+    # 4. DESPLIEGUE DE CADVISOR
+    # -----------------------------------
+
+    CADVISOR_IMAGE=google/cadvisor
+    CADVISOR_TAG=v0.33.0
+    CADVISOR_CONTAINER=cadvisor_joan
+    PATH_CADVISOR_IMAGE=C:\xampp\htdocs\cursos\32Docker\Bloque2\automatico
+
+    build_cadvisor: ## Construcción y despliegue de cadvisor
+        @echo 'Descarga de la imagen de $(CADVISOR_IMAGE)'
+        docker pull $(CADVISOR_IMAGE):$(CADVISOR_TAG)
+        @echo 'Ejecución de $(CADVISOR_IMAGE)'
+        docker run -dp 8080:8080 --name $(CADVISOR_CONTAINER) $(CADVISOR_IMAGE):$(CADVISOR_TAG)
+
+    save_cadvisor: ## Guarda la imagen de cAdvisor
+        @echo 'Guarda la imagen de cAdvisor'
+        docker save $(CADVISOR_IMAGE):$(CADVISOR_TAG) | gzip > $(PATH_CADVISOR_IMAGE)/cadvisor.tar.gz
+
+    load_cadvisor: ## Carga de la imagen de cadvisor y ejecución
+        @echo 'Carga de la imagen'
+        docker load --input $(PATH_CADVISOR_IMAGE)/cadvisor.tar.gz
+        @echo 'Ejecución de un contenedor para cAdvisor'
+        docker run -dp 8080:8080 --name $(CADVISOR_CONTAINER) $(CADVISOR_IMAGE):$(CADVISOR_TAG)
+
+    delete_cadvisor: ## Eliminación de contenedores y imagenes de cadvisor
+        docker rm -f $(CADVISOR_CONTAINER)
+        docker rmi $(CADVISOR_IMAGE):$(CADVISOR_TAG)
     ```
+2. Commit Video 096:
+    + $ git add .
+    + $ git commit -m "096. Automatización de cAdvisor"
+    + $ git push -u origin main
 
 #### 097. Despliegue automático en Amazon Web Services (AWS)
 3. Commit Video 097:

@@ -222,7 +222,7 @@ delete_dapp: ## Eliminación del contenedor de la DAPP
 CADVISOR_IMAGE=google/cadvisor
 CADVISOR_TAG=v0.33.0
 CADVISOR_CONTAINER=cadvisor_joan
-PATH_CADVISOR_IMAGE=/Users/joan_amengual/Desktop/automatico
+PATH_CADVISOR_IMAGE=C:\xampp\htdocs\cursos\32Docker\Bloque2\automatico
 
 build_cadvisor: ## Construcción y despliegue de cadvisor
 	@echo 'Descarga de la imagen de $(CADVISOR_IMAGE)'
