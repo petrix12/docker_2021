@@ -1717,15 +1717,11 @@
     + $ git push -u origin main
 
 #### 097. Despliegue automático en Amazon Web Services (AWS)
-3. Commit Video 097:
++ **Contenido**: acerca del despliegue automático en Amazon Web Services (AWS).
+1. Commit Video 097:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "097. Despliegue automático en Amazon Web Services (AWS)"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
-
 
 ## BLOQUE 3 - Herramientas y técnicas
 
