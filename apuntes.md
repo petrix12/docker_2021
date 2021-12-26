@@ -1573,6 +1573,11 @@
         $(MAKE) down_monitor_redis_exporter
         @echo 'Contenedores en ejecución'
         docker ps -a
+
+    # Proporciona ayuda
+    .PHONY: help
+    help: ## Comando de ayuda
+        @fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
     ```
 3. Commit Video 093:
     + $ git add .
@@ -1580,14 +1585,59 @@
     + $ git push -u origin main
 
 #### 094. Automatización de ELK
+1. Mover **Bloque2\ELK** a **Bloque2\automatico\ELK**.
+2. Modificar archivo **Bloque2\automatico\Makefile**:
+    ```Makefile
+    ≡
+    # -----------------------------------
+    # 3. DESPLIEGUE DE ELK
+    # -----------------------------------
+
+    build_elk: ## Construcción y despliegue de ELK
+        @echo 'Construcción de ELK'
+        cd ELK && docker-compose build
+        @echo 'Despliegue de ELK'
+        cd ELK && docker-compose up -d
+
+    stop_elk: ## Parar los servicios ELK
+        @echo 'Parar los servicios ELK'
+        cd ELK && docker-compose stop
+
+    start_elk: ## Encender los servicios ELK
+        @echo 'Encender los servicios ELK'
+        cd ELK && docker-compose start
+
+    restart_elk: ## Reinicio de los servicios ELK
+        @echo 'Reinicio de ELK'
+        $(MAKE) stop_elk
+        $(MAKE) start_elk
+        docker ps
+
+    # Variables
+    ELASTICSEARCH_IMAGE=elasticsearch:7.9.2
+    LOGSTASH_IMAGE=logstash:7.9.2
+    KIBANA_IMAGE=kibana:7.9.2
+
+    show: ## Mostrar imágenes y contenedores
+        @echo 'Eliminación profunda de ELK'
+        docker images -a 
+        @echo 'Contenedores en ejecución'
+        docker ps --filter status=running
+        @echo 'Contenedores fuera de ejecución'
+        docker ps --filter status=exited
+
+    deep_delete: ## Eliminación profunda de ELK
+        $(MAKE) show_elk
+        @echo 'Eliminación de contenedores'
+        cd ELK && docker-compose down 
+        @echo 'Purgación de las imágenes'
+        docker rmi $(ELASTICSEARCH_IMAGE) $(LOGSTASH_IMAGE) $(KIBANA_IMAGE)
+        $(MAKE) show_elk
+    ```
 3. Commit Video 094:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "094. Automatización de ELK"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 095. Automatización de la DApp de Blockchain con Tokens NFT
 3. Commit Video 095:
