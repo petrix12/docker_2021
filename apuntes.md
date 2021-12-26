@@ -1361,14 +1361,20 @@
     + $ git push -u origin main
 
 #### 088. Construcción de la imagen y ejecución
-3. Commit Video 088:
+1. Ejecutar:
+    + $ cd c:\xampp\htdocs\cursos\32Docker\Bloque2\Colores
+    + $ cat Dockerfile
+    + $ docker build -t tokensnft .
+    + $ docker run -dp 3000:3000 tokensnft      (Explorar: http://localhost:3000)
+    + $ docker ps
+    + $ docker images
+        + Obtener el id de la imagen: a13fa127b605
+    + $ docker tag a13fa127b605 11639889/tokensnft:v1
+    + $ docker push 11639889/tokensnft:v1
+2. Commit Video 088:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "088. Construcción de la imagen y ejecución"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 089. Uso de la DApp con Tokens NFT
 3. Commit Video 089:
