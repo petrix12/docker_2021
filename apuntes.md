@@ -1640,14 +1640,43 @@
     + $ git push -u origin main
 
 #### 095. Automatización de la DApp de Blockchain con Tokens NFT
+1. Mover **Bloque2\Colores** a **Bloque2\automatico\Colores**.
+2. Modificar archivo **Bloque2\automatico\Makefile**:
+    ```Makefile
+    # -----------------------------------
+    # 4. DESPLIEGUE DE LA DAPP BLOCKCHAIN
+    # -----------------------------------
+
+    # Variables
+    DAPP_IMAGE=tokensnft
+    DAPP_TAG=v1
+    DAPP_CONTAINER_NAME=tokens_nft
+
+    build_dapp: ## Construcción de la DAPP
+        @echo 'Construcción de la DAPP'
+        cd Colores && docker build -t $(DAPP_IMAGE):$(DAPP_TAG) .
+
+    run_dapp: ## Despliegue de la DAPP
+        @echo 'Despliegue de la DAPP'
+        docker run -dp 3000:3000 --name $(DAPP_CONTAINER_NAME) $(DAPP_IMAGE):$(DAPP_TAG)
+
+    stop_dapp: ## Parar la ejecución de la DApp
+        @echo 'Parar la ejecución de la DApp'
+        docker stop $(DAPP_CONTAINER_NAME)
+
+    restart_dapp: ## Reinicio de la DApp
+        @echo 'Reinicio de la DApp'
+        docker restart $(DAPP_CONTAINER_NAME)
+
+    delete_dapp: ## Eliminación del contenedor de la DAPP
+        @echo 'Eliminación del contenedor de la DAPP'
+        $(MAKE) stop_dapp
+        docker rm $(DAPP_CONTAINER_NAME)
+    ```
 3. Commit Video 095:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "095. Automatización de la DApp de Blockchain con Tokens NFT"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 096. Automatización de cAdvisor
 3. Commit Video 096:
