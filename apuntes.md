@@ -1341,14 +1341,24 @@
     + $ git push -u origin main
 
 #### 087. Instalación de Metamask y Ganache
-3. Commit Video 087:
++ https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn
++ http://trufflesuite.com/ganache
+1. Ejecutar Google Chrome e instalar la extensión **MetaMask**:
+    + Presionar **Empezar** y luego en **Crear un cartera**.
+    + Presionar en **Acepto** en Ayúdenos a mejorar MetaMask.
+    + Establecer una contraseña.
+    + Presionar en **Siguiente** (Secret Recovery Phrase).
+2. Descargar en instalar [TRUFFLE SUITE](http://trufflesuite.com/ganache) y seleccionar **QUICKSTART**.
+3. Regresar **MetaMask**:
+    + Presionar en **Red principal de Etherum** y seleccionar **Agregar red**:
+        + Nombre de la red: Ganache.
+        + Nueva dirección URL de RPC: HTTP://127.0.0.1:7545
+        + Identificador de cadena: 1337
+4. **Nota**: para terminar de configurar la cuenta ver el video.
+5. Commit Video 087:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "087. Instalación de Metamask y Ganache"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 088. Construcción de la imagen y ejecución
 3. Commit Video 088:
