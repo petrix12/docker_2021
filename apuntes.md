@@ -1388,21 +1388,24 @@
 
 #### 090. Ventajas del uso de Docker para nuestra DAPP de Tokens NFT
 + **Contenido**: sobre las ventajas del uso de Docker.
-3. Commit Video 090:
+1. Commit Video 090:
     + $ git add .
     + $ git commit -m "090. Ventajas del uso de Docker para nuestra DAPP de Tokens NFT"
     + $ git push -u origin main
 
 #### 091. Monitorización de los contenedores
-3. Commit Video 091:
+1. Ejecutar:
+    + $ docker run -d --name cadvisor -p 8080:8080 google/cadvisor:latest
+2. Explorar:
+    + $ http://localhost:8080
+3. Parar contenedor **tokensnft**:
+    + $ docker ps
+        + Obtener el id del contenedor **tokensnft**: f1d4cbf56747
+    + $ docker stop f1d4cbf56747
+4. Commit Video 091:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "091. Monitorización de los contenedores"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
-
 
 ### Sección 15: Automatización de Docker - Nivel experto
 
