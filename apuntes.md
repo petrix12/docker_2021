@@ -1377,14 +1377,14 @@
     + $ git push -u origin main
 
 #### 089. Uso de la DApp con Tokens NFT
-3. Commit Video 089:
+1. Ingresar al directorio del contenedor:
+    + $ docker ps
+        + Obtener el id del contenedor **tokensnft**: f1d4cbf56747
+    + $ docker exec -it f1d4cbf56747 bash
+2. Commit Video 089:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "089. Uso de la DApp con Tokens NFT"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 090. Ventajas del uso de Docker para nuestra DAPP de Tokens NFT
 3. Commit Video 090:
