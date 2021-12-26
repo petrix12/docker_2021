@@ -1728,15 +1728,11 @@
 ### Sección 16: BLOQUE 3: Herramientas y técnicas
 
 #### 098. BLOQUE 3: Herramientas y técnicas
++ **Contenido**: En esta tercera parte del curso nos vamos a centrar de lleno en entender los Herramientas y técnicas de Docker.
 3. Commit Video 098:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "098. BLOQUE 3: Herramientas y técnicas"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
-
 
 ### Sección 17: Descubrimiento de redes y servicios
 
