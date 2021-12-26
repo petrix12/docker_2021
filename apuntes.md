@@ -324,7 +324,7 @@
 + https://docs.docker.com/engine/reference/commandline/rmi
 1. Eliminar todas las imagenes:
     + $ docker stop $(docker ps -q)
-    + $ docker rmi $(docker images)
+    + $ docker rmi $(docker images -q)
 2. Commit Video 029:
     + $ git add .
     + $ git commit -m "029. Eliminar todas las imágenes creadas"
@@ -1402,7 +1402,9 @@
     + $ docker ps
         + Obtener el id del contenedor **tokensnft**: f1d4cbf56747
     + $ docker stop f1d4cbf56747
-4. Commit Video 091:
+4. Parar todos los contenedores:
+    + $ docker stop $(docker ps -q)
+5. Commit Video 091:
     + $ git add .
     + $ git commit -m "091. Monitorización de los contenedores"
     + $ git push -u origin main
@@ -1410,6 +1412,147 @@
 ### Sección 15: Automatización de Docker - Nivel experto
 
 #### 092. Automatización de redis
++ https://parzibyte.me/blog/2020/12/30/instalar-make-windows/#Descargar_make
++ https://howtoinstall.co/es/make
++ https://conpilar.es/como-instalar-herramientas-de-linea-de-comandos-en-mac-os-x-sin-xcode
+1. Descargar e instalar [Make](http://gnuwin32.sourceforge.net/packages/make.htm).
+2. Registrar **C:\Program Files (x86)\GnuWin32\bin** como variable de entorno.
+3. Crear carpeta para un nuevo proyecto **Bloque2\automatico**.
+4. Crear archivo **Bloque2\automatico\Makefile**:
+    ```Makefile
+    # -----------------------------------
+    # 1. CONSTRUCCIÓN DE REDIS
+    # -----------------------------------
+
+    # -----------------------------------
+    # Construir una imagen de redis
+    # Asignar un nombre el contenedor
+    # Asignar un tag mediante variable
+    # -----------------------------------
+
+    # Variables
+    REDIS_TAG=3
+    REDIS_CONTAINER_NAME=redis
+    REDIS_IMAGE_NAME=redis
+
+    build_redis: ## Construcción y despliegue de redis
+        @echo 'Construcción de redis con el TAG=$(REDIS_TAG)'
+        docker pull $(REDIS_IMAGE_NAME):$(REDIS_TAG)
+        @echo 'Ejecución de un contenedor de $(REDIS_IMAGE_NAME) con el nombre $(REDIS_CONTAINER_NAME)'
+        docker run -d --name $(REDIS_CONTAINER_NAME) $(REDIS_IMAGE_NAME):$(REDIS_TAG)
+
+    # -----------------------------------
+    # Visualizar todas las imágenes de docker
+    # Visualizar contenedores activos
+    # Visualizar contenedores inactivos
+    # -----------------------------------
+
+    show_images_containers: ## Visualización de redis
+        @echo 'Imágenes de docker'
+        docker images -a
+        @echo 'Contenedores en ejecución'
+        docker ps --filter status=running
+        @echo 'Contenedores fuera de ejecución'
+        docker ps --filter status=exited
+
+    # -----------------------------------
+    # Eliminar el contenedor de redis
+    # Visualizar de nuevo 
+    # -----------------------------------
+
+    delete_redis: ## Eliminación de redis
+        @echo 'Parar redis'
+        docker stop $(REDIS_CONTAINER_NAME)
+        @echo 'Eliminación del contenedor $(REDIS_CONTAINER_NAME)'
+        docker rm $(REDIS_CONTAINER_NAME)
+        @echo 'Eliminación de la imagen $(REDIS_IMAGE_NAME)'
+        docker rmi $(REDIS_IMAGE_NAME):$(REDIS_TAG)
+        @echo 'Imágenes de docker'
+        docker images -a
+        @echo 'Verificación de la eliminación'
+        docker ps -a
+    ```
+5. Eliminar todas las imagenes:
+    + $ docker stop $(docker ps -q)
+    + $ docker rmi -f $(docker images -q)
+6. Para ejecutar las acciones establecidas en **Bloque2\automatico\Makefile**:
+    + $ make build_redis
+    + $ make show_images_containers
+    + $ make delete_redis
+7. Commit Video 092:
+    + $ git add .
+    + $ git commit -m "092. Automatización de redis"
+    + $ git push -u origin main
+
+#### 093. Automatización de la monitorización: Grafana, Prometheus y redis
+3. Commit Video 093:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 094. Automatización de ELK
+3. Commit Video 094:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 095. Automatización de la DApp de Blockchain con Tokens NFT
+3. Commit Video 095:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 096. Automatización de cAdvisor
+3. Commit Video 096:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 097. Despliegue automático en Amazon Web Services (AWS)
+3. Commit Video 097:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+
+## BLOQUE 3 - Herramientas y técnicas
+
+### Sección 16: BLOQUE 3: Herramientas y técnicas
+
+#### 098. BLOQUE 3: Herramientas y técnicas
+3. Commit Video 098:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+
+### Sección 17: Descubrimiento de redes y servicios
+
+#### 099. Introducción al descubrimiento de redes y servicios
 3. Commit Video 09:
     + $ git add .
     + $ git commit -m ""
@@ -1419,28 +1562,6 @@
     ```yml
     ```
 
-#### 093. Automatización de la monitorización: Grafana, Prometheus y redis
-19 min
-#### 094. Automatización de ELK
-24 min
-#### 095. Automatización de la DApp de Blockchain con Tokens NFT
-28 min
-#### 096. Automatización de cAdvisor
-32 min
-#### 097. Despliegue automático en Amazon Web Services (AWS)
-15 min
-
-## BLOQUE 3 - Herramientas y técnicas
-
-### Sección 16: BLOQUE 3: Herramientas y técnicas
-
-#### 098. BLOQUE 3: Herramientas y técnicas
-1 min
-
-### Sección 17: 
-
-#### 099. Introducción al descubrimiento de redes y servicios
-5 min
 #### 100. Ambassadors
 6 min
 #### 101. Creación de ambassadors
