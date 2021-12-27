@@ -1744,14 +1744,11 @@
     + $ git push -u origin main
 
 #### 100. Ambassadors
++ **Contenido**: sobre contenedores embajadores.
 3. Commit Video 100:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "100. Ambassadors"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 101. Creación de ambassadors
 3. Commit Video 101:
