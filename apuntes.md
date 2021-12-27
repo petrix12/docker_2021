@@ -1737,7 +1737,14 @@
 ### Sección 17: Descubrimiento de redes y servicios
 
 #### 099. Introducción al descubrimiento de redes y servicios
-3. Commit Video 09:
++ **Contenido**: sobre la introducción al descubrimiento de redes y servicios.
+3. Commit Video 099:
+    + $ git add .
+    + $ git commit -m "099. Introducción al descubrimiento de redes y servicios"
+    + $ git push -u origin main
+
+#### 100. Ambassadors
+3. Commit Video 100:
     + $ git add .
     + $ git commit -m ""
     + $ git push -u origin main
@@ -1746,60 +1753,239 @@
     ```yml
     ```
 
-#### 100. Ambassadors
-6 min
 #### 101. Creación de ambassadors
-16 min
-#### 102. Descubrimiento de servicios: etcd
-7 min
-#### 103. Descubrimiento de servicios: SkyDNS
-3 min
-#### 104. Implementación: etcd
-12 min
-#### 105. Implementación: SkyDNS
-15 min
-#### 106. Otras soluciones de descubrimiento de servicios
-10 min
-#### 107. Opciones de red
-9 min
+3. Commit Video 101:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
 
-### Sección 18: 
+    ≡
+    ```yml
+    ```
+
+#### 102. Descubrimiento de servicios: etcd
+3. Commit Video 102:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 103. Descubrimiento de servicios: SkyDNS
+3. Commit Video 103:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 104. Implementación: etcd
+3. Commit Video 104:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 105. Implementación: SkyDNS
+3. Commit Video 105:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 106. Otras soluciones de descubrimiento de servicios
+3. Commit Video 106:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 107. Opciones de red
+3. Commit Video 107:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+
+### Sección 18: Orquestación, clustering y gestión
 
 #### 108. Introducción a la orquestación, clustering y gestión
-9 min
-#### 109. Docker Swarm
-6 min
-#### 110. Uso práctico de Docker Swarm
-24 min
-#### 111. Kubernetes
-21 min
-#### 112. Uso práctico de Kubernetes
-15 min
-#### 113. Swarm vs Kubernetes - ¿Cuál es mejor?
-9 min
+3. Commit Video 108:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
 
-### Sección 19: 
+    ≡
+    ```yml
+    ```
+
+#### 109. Docker Swarm
+3. Commit Video 109:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 110. Uso práctico de Docker Swarm
+3. Commit Video 110:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 111. Kubernetes
+3. Commit Video 111:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 112. Uso práctico de Kubernetes
+3. Commit Video 112:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 113. Swarm vs Kubernetes - ¿Cuál es mejor?
+3. Commit Video 113:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+### Sección 19: Seguridad y limitación de contenedores
 
 #### 114. Cosas de las que preocuparse
-8 min
-#### 115. Defensa a fondo
-7 min
-#### 116. Segregar contenedores por host
-4 min
-#### 117. Aplicación de las actualizaciones
-10 min
-#### 118. Procedencia de la imagen
-11 min
-#### 119. Confianza en el contenido de Docker
-14 min
-#### 120. Dockerfiles reproducibles y de confianza
-13 min
-#### 121. Limitación de: Memoria, CPU, Reinicios, Sistemas de archivos y Capacidades
-28 min
+3. Commit Video 114:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
 
-### Sección 20: 
+    ≡
+    ```yml
+    ```
+
+#### 115. Defensa a fondo
+3. Commit Video 115:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 116. Segregar contenedores por host
+3. Commit Video 116:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 117. Aplicación de las actualizaciones
+3. Commit Video 117:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 118. Procedencia de la imagen
+3. Commit Video 118:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 119. Confianza en el contenido de Docker
+3. Commit Video 119:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 120. Dockerfiles reproducibles y de confianza
+3. Commit Video 120:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+#### 121. Limitación de: Memoria, CPU, Reinicios, Sistemas de archivos y Capacidades
+3. Commit Video 121:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
+### Sección 20: BONYS
 
 #### 122. Fin del curso
-7 min
+3. Commit Video 122:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
+
 #### 123. BONUS
-1 min
+3. Commit Video 123:
+    + $ git add .
+    + $ git commit -m ""
+    + $ git push -u origin main
+
+    ≡
+    ```yml
+    ```
