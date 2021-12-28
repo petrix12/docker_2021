@@ -1751,14 +1751,47 @@
     + $ git push -u origin main
 
 #### 101. Creación de ambassadors
-3. Commit Video 101:
+1. Parar todos los contenedores:
+    + $ docker stop $(docker ps -q)
+2. Instalar Docker Desktop:
+    + Ir a https://www.docker.com
+    + Presionar en **Get Started** y descargar **Docker Desktop**.
+    + Instalar Oracle VirtualBox (https://www.virtualbox.org/wiki/Downloads)
+    + $ brew install docker-machine (en MacOs)
+    + $ choco install docker-machine (en Window, ejecutar en una terminal como administrador)
+3. Creación de máquinas virtuales:
+    + $ docker-machine create -d virtualbox redis-host
+    + $ docker-machine create -d virtualbox identidock-host
+        + **Nota 1**: Si no funciona, entonces reemplazar cadena **create -d virtualbox** con **create -d virtualbox --virtualbox-no-vtx-check**, quedando así: 
+            + $ docker-machine create -d virtualbox --virtualbox-no-vtx-check redis-host
+            + $ docker-machine create -d virtualbox --virtualbox-no-vtx-check identidock-host
+        + **Nota 2**: Si los problemas persisten visitar:
+            + https://www.it-swarm-es.com/es/windows/docker-toolbox-no-tiene-vt-x-amd-v-incluso-si-esta-habilitado/944640206/
+            + https://stackoverflow.com/questions/60078434/docker-machine-command-not-found
+4. Enviar variable de entorno a máquina virtual de **redis-host**:
+    + $ eval $(docker-machine env redis-host)
+5. Ejecutar:
+    + $ docker run -d --name real-redis redis:3
+    + $ docker run -d --name real-redis-ambassador \
+    + > -p 6379:6379 \
+    + > --link real-redis:real-redis \
+    + > amouat/ambassador
+    + $ eval $(docker-machine env identidock-host)
+    + $ docker run -d --name redis_ambassador \
+    + > -expose 6379 \
+    + > -e REDIS_PORT_6379_TCP=tcp://$(docker-machine ip redis-host):6379 \
+    + > amouat/ambassador
+    + $ docker run -d --name dnmonster \
+    + > amouat/dnmonster:1.0
+    + $ docker run -d --link dnmonster:dnmonster \
+    + > --link redis_ambassador:redis \
+    + > -p 80:9090 \
+    + > amouat/identidock:1.0
+    + $ curl $(docker-machine ip identidock-host)
+6. Commit Video 101:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "101. Creación de ambassadors"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 102. Descubrimiento de servicios: etcd
 3. Commit Video 102:
