@@ -1816,14 +1816,12 @@
     + $ git push -u origin main
 
 #### 105. Implementación: SkyDNS
++ **Contenido**: sobre la implementación SkyDNS.
++ Ver tutorial: **Recursos\etcd+-+skydns.pdf**.
 3. Commit Video 105:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "105. Implementación: SkyDNS"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 106. Otras soluciones de descubrimiento de servicios
 3. Commit Video 106:
