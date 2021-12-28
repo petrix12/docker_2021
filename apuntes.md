@@ -1801,14 +1801,11 @@
     + $ git push -u origin main
 
 #### 103. Descubrimiento de servicios: SkyDNS
-3. Commit Video 103:
++ **Contenido**: sobre los servicios de SkyDNS.
+1. Commit Video 103:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "103. Descubrimiento de servicios: SkyDNS"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 104. Implementación: etcd
 3. Commit Video 104:
