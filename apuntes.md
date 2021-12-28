@@ -1836,15 +1836,15 @@
     + $ git push -u origin main
 
 #### 107. Opciones de red
++ **Contenido**: algunas opciones de red disponibles:
+    + Bridge
+    + Host
+    + Container
+    + None
 3. Commit Video 107:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "107. Opciones de red"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
-
 
 ### Sección 18: Orquestación, clustering y gestión
 
