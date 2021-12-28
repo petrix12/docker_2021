@@ -1824,14 +1824,16 @@
     + $ git push -u origin main
 
 #### 106. Otras soluciones de descubrimiento de servicios
-3. Commit Video 106:
++ **Contenido**: sobre los servicios:
+    + ZooKeeper
+    + Eureka
+    + SmartStack
+    + WeaveDNS
+    + docker-discover
+1. Commit Video 106:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "106. Otras soluciones de descubrimiento de servicios"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 107. Opciones de red
 3. Commit Video 107:
