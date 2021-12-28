@@ -1794,14 +1794,11 @@
     + $ git push -u origin main
 
 #### 102. Descubrimiento de servicios: etcd
-3. Commit Video 102:
++ **Contenido**: sobre los servicios etcd y tamaño optimo de clusters.
+1. Commit Video 102:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "102. Descubrimiento de servicios: etcd"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 103. Descubrimiento de servicios: SkyDNS
 3. Commit Video 103:
