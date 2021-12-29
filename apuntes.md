@@ -1863,17 +1863,15 @@
     + $ git push -u origin main
 
 #### 110. Uso práctico de Docker Swarm
-3. Commit Video 110:
++ **Contenido**: ejercicio práctico sobre Docker Swarm.
+1. Commit Video 110:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "110. Uso práctico de Docker Swarm"
     + $ git push -u origin main
 
-    ≡
-    ```yml
-    ```
-
 #### 111. Kubernetes
-3. Commit Video 111:
++ https://kubernetes.io/es/docs/concepts/overview/components
+1. Commit Video 111:
     + $ git add .
     + $ git commit -m ""
     + $ git push -u origin main
