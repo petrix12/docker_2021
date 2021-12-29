@@ -1856,14 +1856,11 @@
     + $ git push -u origin main
 
 #### 109. Docker Swarm
-3. Commit Video 109:
++ **Contenido**: sobre Docker Swarm.
+1. Commit Video 109:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "109. Docker Swarm"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 110. Uso práctico de Docker Swarm
 3. Commit Video 110:
