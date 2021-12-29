@@ -1909,14 +1909,11 @@
     + $ git push -u origin main
 
 #### 116. Segregar contenedores por host
++ **Contenido**: importancia de segregar contenedores por host.
 3. Commit Video 116:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "116. Segregar contenedores por host"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 117. Aplicación de las actualizaciones
 3. Commit Video 117:
