@@ -1895,14 +1895,11 @@
 ### Sección 19: Seguridad y limitación de contenedores
 
 #### 114. Cosas de las que preocuparse
++ **Contenido**: sobre temas de seguridad a considerar.
 3. Commit Video 114:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "114. Cosas de las que preocuparse"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 115. Defensa a fondo
 3. Commit Video 115:
