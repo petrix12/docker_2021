@@ -1878,14 +1878,12 @@
     + $ git push -u origin main
 
 #### 112. Uso práctico de Kubernetes
++ **Contenido**: ejercicio práctico sobre Kubernetes.
++ https://minikube.sigs.k8s.io/docs/start
 3. Commit Video 112:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "112. Uso práctico de Kubernetes"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 113. Swarm vs Kubernetes - ¿Cuál es mejor?
 3. Commit Video 113:
