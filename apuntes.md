@@ -1871,14 +1871,11 @@
 
 #### 111. Kubernetes
 + https://kubernetes.io/es/docs/concepts/overview/components
++ **Contenido**: sobre Kubernetes.
 1. Commit Video 111:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "111. Kubernetes"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 112. Uso práctico de Kubernetes
 3. Commit Video 112:
