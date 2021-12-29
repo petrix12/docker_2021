@@ -1886,14 +1886,11 @@
     + $ git push -u origin main
 
 #### 113. Swarm vs Kubernetes - ¿Cuál es mejor?
++ **Contenido**: sobre Swarm vs Kubernetes.
 3. Commit Video 113:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "Swarm vs Kubernetes - ¿Cuál es mejor?"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 ### Sección 19: Seguridad y limitación de contenedores
 
