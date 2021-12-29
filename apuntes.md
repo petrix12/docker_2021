@@ -1849,14 +1849,11 @@
 ### Sección 18: Orquestación, clustering y gestión
 
 #### 108. Introducción a la orquestación, clustering y gestión
-3. Commit Video 108:
++ **Contenido**: sobre orquestación, clustering y gestión.
+1. Commit Video 108:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "108. Introducción a la orquestación, clustering y gestión"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 109. Docker Swarm
 3. Commit Video 109:
