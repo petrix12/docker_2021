@@ -1902,14 +1902,11 @@
     + $ git push -u origin main
 
 #### 115. Defensa a fondo
++ **Contenido**: limitar recursos y permisos para evitar posibles ataques.
 3. Commit Video 115:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "115. Defensa a fondo"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 116. Segregar contenedores por host
 3. Commit Video 116:
