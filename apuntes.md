@@ -1916,14 +1916,11 @@
     + $ git push -u origin main
 
 #### 117. Aplicación de las actualizaciones
++ **Contenido**: Sobre la aplicación de las actualizaciones.
 3. Commit Video 117:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "117. Aplicación de las actualizaciones"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 118. Procedencia de la imagen
 3. Commit Video 118:
