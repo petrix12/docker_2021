@@ -1931,21 +1931,18 @@
     + $ git push -u origin main
 
 #### 119. Confianza en el contenido de Docker
-+ Contenido: sobre confianza en el contenido de Docker.
++ **Contenido**: sobre confianza en el contenido de Docker.
 1. Commit Video 119:
     + $ git add .
     + $ git commit -m "119. Confianza en el contenido de Docker"
     + $ git push -u origin main
 
 #### 120. Dockerfiles reproducibles y de confianza
++ **Contenido**: sobre Dockerfiles reproducibles y de confianza.
 1. Commit Video 120:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "120. Dockerfiles reproducibles y de confianza"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 121. Limitación de: Memoria, CPU, Reinicios, Sistemas de archivos y Capacidades
 1. Commit Video 121:
