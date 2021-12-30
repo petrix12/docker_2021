@@ -1880,14 +1880,14 @@
 #### 112. Uso práctico de Kubernetes
 + **Contenido**: ejercicio práctico sobre Kubernetes.
 + https://minikube.sigs.k8s.io/docs/start
-3. Commit Video 112:
+1. Commit Video 112:
     + $ git add .
     + $ git commit -m "112. Uso práctico de Kubernetes"
     + $ git push -u origin main
 
 #### 113. Swarm vs Kubernetes - ¿Cuál es mejor?
 + **Contenido**: sobre Swarm vs Kubernetes.
-3. Commit Video 113:
+1. Commit Video 113:
     + $ git add .
     + $ git commit -m "Swarm vs Kubernetes - ¿Cuál es mejor?"
     + $ git push -u origin main
@@ -1896,44 +1896,42 @@
 
 #### 114. Cosas de las que preocuparse
 + **Contenido**: sobre temas de seguridad a considerar.
-3. Commit Video 114:
+1. Commit Video 114:
     + $ git add .
     + $ git commit -m "114. Cosas de las que preocuparse"
     + $ git push -u origin main
 
 #### 115. Defensa a fondo
 + **Contenido**: limitar recursos y permisos para evitar posibles ataques.
-3. Commit Video 115:
+1. Commit Video 115:
     + $ git add .
     + $ git commit -m "115. Defensa a fondo"
     + $ git push -u origin main
 
 #### 116. Segregar contenedores por host
 + **Contenido**: importancia de segregar contenedores por host.
-3. Commit Video 116:
+1. Commit Video 116:
     + $ git add .
     + $ git commit -m "116. Segregar contenedores por host"
     + $ git push -u origin main
 
 #### 117. Aplicación de las actualizaciones
 + **Contenido**: Sobre la aplicación de las actualizaciones.
-3. Commit Video 117:
+1. Commit Video 117:
     + $ git add .
     + $ git commit -m "117. Aplicación de las actualizaciones"
     + $ git push -u origin main
 
 #### 118. Procedencia de la imagen
-3. Commit Video 118:
++ https://www.pelock.com/products/hash-calculator
++ **Contenido**: como comprobar la procedencia de la imagen.
+1. Commit Video 118:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "118. Procedencia de la imagen"
     + $ git push -u origin main
 
-    ≡
-    ```yml
-    ```
-
 #### 119. Confianza en el contenido de Docker
-3. Commit Video 119:
+1. Commit Video 119:
     + $ git add .
     + $ git commit -m ""
     + $ git push -u origin main
@@ -1943,7 +1941,7 @@
     ```
 
 #### 120. Dockerfiles reproducibles y de confianza
-3. Commit Video 120:
+1. Commit Video 120:
     + $ git add .
     + $ git commit -m ""
     + $ git push -u origin main
@@ -1953,7 +1951,7 @@
     ```
 
 #### 121. Limitación de: Memoria, CPU, Reinicios, Sistemas de archivos y Capacidades
-3. Commit Video 121:
+1. Commit Video 121:
     + $ git add .
     + $ git commit -m ""
     + $ git push -u origin main
@@ -1965,7 +1963,7 @@
 ### Sección 20: BONYS
 
 #### 122. Fin del curso
-3. Commit Video 122:
+1. Commit Video 122:
     + $ git add .
     + $ git commit -m ""
     + $ git push -u origin main
@@ -1975,7 +1973,7 @@
     ```
 
 #### 123. BONUS
-3. Commit Video 123:
+1. Commit Video 123:
     + $ git add .
     + $ git commit -m ""
     + $ git push -u origin main
