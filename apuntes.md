@@ -1945,14 +1945,11 @@
     + $ git push -u origin main
 
 #### 121. Limitación de: Memoria, CPU, Reinicios, Sistemas de archivos y Capacidades
++ **Contenido**: sobre la limitación de recursos.
 1. Commit Video 121:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "121. Limitación de: Memoria, CPU, Reinicios, Sistemas de archivos y Capacidades"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 ### Sección 20: BONYS
 
