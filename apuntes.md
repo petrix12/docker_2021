@@ -1954,14 +1954,11 @@
 ### Sección 20: BONYS
 
 #### 122. Fin del curso
++ **Contenido**: repaso de lo visto.
 1. Commit Video 122:
     + $ git add .
-    + $ git commit -m ""
+    + $ git commit -m "122. Fin del curso"
     + $ git push -u origin main
-
-    ≡
-    ```yml
-    ```
 
 #### 123. BONUS
 1. Commit Video 123:
